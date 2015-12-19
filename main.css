@@ -1,0 +1,38 @@
+body{
+    padding-top: 35px;
+    font-family: 'Open Sans';
+    color:white;
+    background-color:black;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background: url('images/banner.png') no-repeat center center !important;
+  background-size: cover;
+}
+
+.jumbotron h1{
+    font-family: 'Gill Sans Nova';
+    font-weight: bold;
+    font-size: 6.5em;
+    margin-top: 0px;
+}
+
+.jumbotron h2{
+    font-family: 'Gill Sans Nova Light';
+    font-size: 2em;
+}
+
+#page_footer{
+  padding:10px;
+  text-align:center;
+}
+
+#title_heading{
+    font-family: 'Gill Sans Nova';
+    font-weight: normal;
+    font-size: 6.5em;
+}
+
