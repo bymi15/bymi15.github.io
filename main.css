@@ -42,7 +42,11 @@ img {
 
 .col-md-4 i{
     display:block;
-    text-align:center
+    text-align:center;
+}
+
+.centered {
+  text-align: center;
 }
 
 #page_footer{
@@ -57,20 +61,58 @@ img {
 }
 
 #about_me {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  width:100%;
+  margin-top: 0px;
+  padding-top: 40px;
 }
 
 #about_me i {
-  color: #00b3fe;
   font-size: 60px;
-  padding: 15px;
+  padding: 10px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+#about_me p{
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #bg_about_me {
   padding:3em;
   background-image: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #dddddd;
 }
+
+#bg_uni_projects {
+  padding:3em;
+  background-image: linear-gradient(180deg, #e6e6e6, #ffffff);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #dddddd;
+  color:black;
+}
+
+#bg_personal_projects {
+  padding:3em;
+  background-image: linear-gradient(180deg, #e6e6e6, #ffffff);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #dddddd;
+  color:black;
+}
+
+#bg_contact {
+  padding:3em;
+  background-image: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
+  /*background-image: linear-gradient(180deg, #660000, #990000, #330000);*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:white;
+}
+
 
 #subheadings {
   font-family: 'Raleway';
