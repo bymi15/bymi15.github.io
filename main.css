@@ -28,14 +28,15 @@ img {
 }
 
 .jumbotron h1{
-    font-family: 'Gill Sans Nova';
+    font-family: 'Syncopate';
     font-weight: bold;
     font-size: 6.5em;
     margin-top: 0px;
 }
 
 .jumbotron h2{
-    font-family: 'Gill Sans Nova Light';
+    font-family: 'Raleway';
+    font-weight: lighter;
     font-size: 2em;
 }
 
@@ -50,7 +51,7 @@ img {
 }
 
 #title_heading{
-    font-family: 'Gill Sans Nova';
+    font-family: 'Raleway';
     font-weight: normal;
     font-size: 6.5em;
 }
@@ -72,7 +73,7 @@ img {
 }
 
 #subheadings {
-  font-family: 'Gill Sans Nova Light';
+  font-family: 'Raleway';
   font-weight: lighter;
   font-size: 80px;
 }
