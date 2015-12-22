@@ -45,8 +45,53 @@ img {
     text-align:center;
 }
 
-.centered {
+.centered{
   text-align: center;
+}
+
+.marginBelow{
+  margin-bottom:3em;
+}
+
+.project{
+  padding:20px;
+  margin:0px;
+  background:linear-gradient(130deg, #cc0000, #300000, #a30000);
+  border:2px solid #dddddd;
+  /*linear-gradient(180deg, #b3b3b3, #ffffff, #999999)*/
+}
+
+.project p{
+  text-align:center;
+  color:white;
+  font-size:20px;
+}
+
+.project h3{
+  text-align:center;
+  color:white;
+  font-weight:bold;
+}
+
+.projectName{
+
+}
+
+.projectDesc{
+
+}
+
+.slideshow{
+  position:relative;
+  height:300px;
+  width:500px;
+  margin:auto;
+}
+
+.slideshow img{
+  position:absolute;
+  left:0;
+  top:0;
 }
 
 #page_footer{
@@ -80,7 +125,7 @@ img {
 
 #bg_about_me {
   padding:3em;
-  background-image: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
+  background: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
   margin-top: 0px;
   margin-bottom: 0px;
   border-bottom: 2px solid #dddddd;
@@ -88,7 +133,7 @@ img {
 
 #bg_uni_projects {
   padding:3em;
-  background-image: linear-gradient(180deg, #e6e6e6, #ffffff);
+  background: linear-gradient(180deg, #e6e6e6, #ffffff);
   margin-top: 0px;
   margin-bottom: 0px;
   border-bottom: 2px solid #dddddd;
@@ -97,7 +142,7 @@ img {
 
 #bg_personal_projects {
   padding:3em;
-  background-image: linear-gradient(180deg, #e6e6e6, #ffffff);
+  background: linear-gradient(180deg, #e6e6e6, #ffffff);
   margin-top: 0px;
   margin-bottom: 0px;
   border-bottom: 2px solid #dddddd;
@@ -106,55 +151,19 @@ img {
 
 #bg_contact {
   padding:3em;
-  background-image: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
+  background: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
   /*background-image: linear-gradient(180deg, #660000, #990000, #330000);*/
   margin-top: 0px;
   margin-bottom: 0px;
   color:white;
 }
 
+#bg_contact p {
+  font-size:20px;
+}
 
 #subheadings {
   font-family: 'Raleway';
   font-weight: lighter;
   font-size: 80px;
-}
-
-@-webkit-keyframes fadeIn {
- 0% {
- opacity: 0;
-}
- 100% {
- opacity:1;
-}
-}
-@-moz-keyframes fadeIn {
- 0% {
- opacity: 0;
-}
- 100% {
- opacity:1;
-}
-}
-@-o-keyframes fadeIn {
- 0% {
- opacity: 0;
-}
- 100% {
- opacity:1;
-}
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
 }
