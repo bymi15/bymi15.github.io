@@ -19,7 +19,7 @@ img {
   color: white;
   text-shadow: black 0.3em 0.3em 0.3em;
   position: relative;
-  background: url('images/banner.png') no-repeat center center;
+  background: url('../images/banner.png') no-repeat center center;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -61,6 +61,13 @@ img {
   /*linear-gradient(180deg, #b3b3b3, #ffffff, #999999)*/
 }
 
+.project img{
+  display:block;
+  margin:auto;
+  width:500px;
+  height:300px;
+}
+
 .project p{
   text-align:center;
   color:white;
@@ -74,24 +81,100 @@ img {
 }
 
 .projectName{
+  font-family:"Syncopate";
+  padding-bottom:10px;
+}
 
+.projectSkills{
+  font-style:italic;
+  font-weight:bold;
 }
 
 .projectDesc{
-
-}
-
-.slideshow{
-  position:relative;
-  height:300px;
-  width:500px;
-  margin:auto;
-}
-
-.slideshow img{
+  padding:20px;
+  width:100%;
+  height:100%;
   position:absolute;
-  left:0;
+  overflow:hidden;
   top:0;
+  left:0;
+
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  transition: 500ms;
+  -webkit-transition: 500ms;
+}
+
+.projectDesc h3{
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  background: transparent;
+  transform: rotate(180deg) skew(100deg, 100deg);
+  -webkit-transform: rotate(180deg) skew(100deg, 100deg);
+  transition: 500ms;
+  -webkit-transition: 500ms;
+}
+
+.projectDesc p{
+  position: relative;
+  text-align: center;
+
+  opacity: 0;
+  transform: rotate(180deg) skew(100deg, 100deg);
+  -webkit-transform: rotate(180deg) skew(100deg, 100deg);
+  transition: 500ms;
+  -webkit-transition: 500ms;
+}
+
+.projectDesc i{
+  display:block;
+  color: #ffffff;
+  text-align: center;
+  font-size:30px;
+
+  opacity: 0;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  transition: 500ms;
+  -webkit-transition: 500ms;
+}
+
+.project:hover .projectDesc{
+  opacity: 1;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transform: translateX(0px);
+  -webkit-transform: translateX(100px);
+}
+
+.project:hover img{
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+}
+
+.project:hover h3{
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+}
+
+.project:hover p{
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+}
+
+.project:hover i{
+  opacity: 1;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
 }
 
 #page_footer{
