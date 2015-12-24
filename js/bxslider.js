@@ -18,4 +18,10 @@ $(document).ready(function(){
       pause: 4000
     });
 
+    $('#slider4').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 4500
+    });
+
 });
