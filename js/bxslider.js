@@ -24,4 +24,10 @@ $(document).ready(function(){
       pause: 4500
     });
 
+    $('#slider5').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 4000
+    });
+
 });

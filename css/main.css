@@ -43,10 +43,21 @@ img {
 .skills{
   text-align: center;
 }
+
 .skills span{
   font-size:30px;
   display:inline-block;
   margin:5px;
+  padding:15px 15px;
+}
+
+.interests{
+  text-align: center;
+}
+
+.interests span{
+  font-size:18px;
+  display:inline-block;
   padding:15px 15px;
 }
 
@@ -287,6 +298,10 @@ img {
 #bg_contact i {
   font-size:100px;
   padding-right:50px;
+}
+
+#bg_contact a:hover {
+  opacity:0.5;
 }
 
 #subheadings {
