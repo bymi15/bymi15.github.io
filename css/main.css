@@ -234,6 +234,40 @@ img {
   -ms-transition: 500ms;
 }
 
+.icon{
+  font-size: 100px;
+  margin: 7px;
+  color: #595959;
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.icon.facebook:hover {
+  color: #3b5998;
+}
+
+.icon.instagram:hover {
+  color: #cc4400;
+}
+
+.icon.linkedin:hover {
+  color: #4099ff;
+}
+
+.icon.github:hover {
+  color: #6600cc;
+}
+
+.icon.email:hover {
+  color: #cc8810;
+}
+
+.label.label-custom {
+  background-color: #996633;
+}
+
 #page_footer{
   padding:10px;
   text-align:center;
@@ -269,6 +303,12 @@ img {
   font-size:40px;
   font-weight: bold;
 }
+
+#about_me span{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 #bg_about_me {
   padding:3em;
   background: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
@@ -287,21 +327,26 @@ img {
 }
 
 #bg_contact {
+/*
   padding:3em;
-  background: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
-  /*background-image: linear-gradient(180deg, #660000, #990000, #330000);*/
+  background-image: linear-gradient(180deg, #660000, #990000, #330000);
   margin-top: 0px;
   margin-bottom: 0px;
   color:white;
+*/
+  padding:3em;
+  background-image: linear-gradient(180deg, #e6e6e6, #ffffff);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:black;
 }
 
-#bg_contact i {
-  font-size:100px;
-  padding-right:50px;
-}
-
-#bg_contact a:hover {
-  opacity:0.5;
+#bg_cv {
+  padding:3em;
+  background-image: linear-gradient(180deg, #0d0d0d, #262626, #1a1a1a);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #dddddd;
 }
 
 #subheadings {
