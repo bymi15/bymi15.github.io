@@ -15,16 +15,14 @@ img {
 }
 
 .jumbotron {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  height: 100%;  /* Fallback for old browsers */
+  height: 100vh;
 
   display: flex;
   align-items: center;
   text-align: center;
 
   color: #fff;
-  /*background-color: #C92A2A;*/
-  background-color: #912121;
 
   /*SOURCE: uigradients.com*/
   background: #2F7336; /* fallback for old browsers */
