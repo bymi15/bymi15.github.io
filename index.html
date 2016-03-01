@@ -5,11 +5,12 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Brian Min - Personal Website">
+    <meta name="keywords" content="brian,min,portfolio,ucl,computer,science">
     <meta name="author" content="Brian Min">
     <link rel="shortcut icon" href="images/favicon.png">
 
@@ -22,16 +23,22 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+
+     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
     <a name="page_top"></a>
     <div class="container-fluid">
         <section class="jumbotron">
-            <div class="container-fluid">
-                <div id="title_heading">HELLO, I'M</div>
+            <div class="col-xs-12">
+                <img class="img-responsive" src="images/profile.png" alt="">
                 <h1>BRIAN MIN</h1>
-                <h2>First year Computer Science student at UCL</h2>
-                <div class="visible-sm visible-xs"></div>
+                <h2>First Year Computer Science Student at UCL</h2>
             </div>
         </section>
 
@@ -48,8 +55,8 @@
                 <li><a href="#page_top">Home</a></li>
                 <li><a href="#page_about_me">About Me</a></li>
                 <li><a href="#page_projects">My Projects</a></li>
-                <li><a href="#page_cv">CV</a></li>
                 <li><a href="#page_contact">Contact</a></li>
+                <li><a href="http://bmin.comxa.com/BrianMin_CV_Resume.pdf" target="_blank">CV/Resume</a></li>
               </ul>
             </div>
           </div>
@@ -57,22 +64,25 @@
 
         <a name="page_about_me"></a>
         <section id="bg_about_me">
-            <header>
+            <header class="centered">
                 <h2 id="subheadings">About Me</h2>
                 <hr>
                 <h3>I am a first year MEng Computer Science student studying at University College London <i class="fa fa-university"></i></h3>
-                <ul>
+
+                <a class="btn btn-danger" href="http://bmin.comxa.com/BrianMin_CV_Resume.pdf" target="_blank">View CV/Resume</a></button>
+
+                <ul id="about_me_list">
                     <li><h3>I constantly find <strong>new</strong> things to do, which ranges from figuring out how to solve a <strong>3x3 rubiks cube</strong> to learning to play the <strong>acoustic guitar</strong></h3></li>
                     <li><h3>Software development <strong>drives me</strong> as it constantly provides me with <em>something <strong>new</strong> to create.</em></h3></li>
                     <li><h3>To me, programming is another dimension to the world; one which enables me to capture my creative impulse.</h3></li>
-                </ul>
+                </ul><br>
 
             </header>
 
             <div id="about_me">
                 <div class="row centered">
-                    <div class="col-lg-4">
-                        <i class="fa fa-heart-o" style="color:#e60000;"></i>
+                    <div class="col-sm-4">
+                        <i class="fa fa-heart-o" style="color:#e30000;"></i>
                         <h3>Interests</h3>
                         <div class="interests">
                             <span class="label label-danger">Software Development</span></br>
@@ -80,7 +90,7 @@
                             <span class="label label-primary">Problem Solving</span><br/>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <i class="fa fa-code" style="color:#30f000;"></i>
                         <h3>Skills</h3>
                         <div class="skills">
@@ -93,14 +103,13 @@
                             <span class="label label-custom">Github</span>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <i class="fa fa-trophy" style="color:#00b3fe;"></i>
                         <h3>Activities</h3>
                         <p>UCLU Tech Society Member</p>
                         <p>UCLU Poker Society Member</p>
                         <p>UCLU Mixed Volleyball Team Member</p>
                         <p>UCLU Parkour Society Member</p>
-                        <p>Co-founder of Primary School Basketball Camp</p>
                         <p>Part-time Waiter at BBQ Restaurant</p>
                         <br/>
                     </div>
@@ -116,7 +125,7 @@
             </header>
 
             <div class="row">
-                <div class="col-lg-4 project">
+                <div class="col-sm-4 project">
                     <h3 class="projectName">MUSIC TV</h3>
 
                     <ul id="slider1">
@@ -128,14 +137,14 @@
 
                     <div class="projectDesc">
                         <h3 class="projectName">Music TV</h3>
-                        <p>HackKings 2015 - 24 hr hackathon</p>
+                        <p>HackKings 2015</p>
                         <p class="projectSkills">Android/Java/PHP/MySQL/HTML5/CSS3/Bootstrap</p>
                         </br>
                         <p>Worked in a team of four and developed a system that allows users to request a song/artist of their choice or up/down vote existing songs in the queue. The tracks are automatically played in an embedded youtube video with the highest voted songs prioritised. </p></br>
                         <a href="http://devpost.com/software/music-tv-music-videos-for-the-masses-finally" target="_blank"><i class="fa fa-link"> Read more</i></a>
                     </div>
                 </div> <!--project-->
-                <div class="col-lg-4 project">
+                <div class="col-sm-4 project">
                         <h3 class="projectName">TASK SCHEDULER</h3>
 
                         <ul id="slider2">
@@ -153,7 +162,7 @@
                             <a href="https://github.com/bymi15/TaskScheduler" target="_blank"><i class="fa fa-github"> Github</i></a>
                         </div>
                 </div> <!--project-->
-                <div class="col-lg-4 project">
+                <div class="col-sm-4 project">
                     <h3 class="projectName">ENGUINO COPTER</h3>
 
                     <ul id="slider3">
@@ -171,7 +180,7 @@
                         <a href="https://github.com/bymi15/EngduinoCopter" target="_blank"><i class="fa fa-github"> Github</i></a>
                     </div>
                 </div> <!--project-->
-                <div class="col-lg-4 project">
+                <div class="col-sm-4 project">
                     <h3 class="projectName">MMSEAFOOD POS</h3>
 
                     <ul id="slider4">
@@ -188,7 +197,7 @@
                         <p>A point-of-sale system for my client: MMSeafood - a small seafood restaurant located in Bangkok. Functionalities include: a login system, a main navigation form, a virtual table layout form where customers can be allocated to specific table numbers, a receipt generation system for each table, and menu form that allows my client to modify the meals and its prices easily.</p></br>
                     </div>
                 </div> <!--project-->
-                <div class="col-lg-4 project">
+                <div class="col-sm-4 project">
                     <h3 class="projectName">MINSTA-CHAT</h3>
 
                     <ul id="slider5">
@@ -212,17 +221,6 @@
             </div>
         </section>
 
-        <a name="page_cv"></a>
-
-         <section id="bg_cv">
-            <div class="row">
-                <h2 id="subheadings">CV</h2>
-                <div style="text-align:center;">
-                    <embed src="http://bmin.comxa.com/BrianMin_CV_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0" width="800" height="1000">
-                </div>
-            </div>
-        </section>
-
         <a name="page_contact"></a>
 
         <section id="bg_contact">
@@ -238,7 +236,7 @@
         </section>
 
         <footer id="page_footer">
-            &copy; 2016 Brian Min. All rights reserved.
+            &copy; 2016 Brian Min. All rights reserved. Created using <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. Animation from <a href="http://bxslider.com" target="_blank">BxSlider</a> and <a href="https://github.com/kswedberg/jquery-smooth-scroll" target="_blank">SmoothScroll</a> all under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
         </footer>
     </div>
 
