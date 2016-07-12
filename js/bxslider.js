@@ -30,4 +30,16 @@ $(document).ready(function(){
       pause: 4000
     });
 
+    $('#slider6').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 3500
+    });
+
+    $('#slider7').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 4000
+    });
+
 });
