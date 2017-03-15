@@ -42,4 +42,15 @@ $(document).ready(function(){
       pause: 4000
     });
 
+    $('#slider8').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 4000
+    });
+
+    $('#slider9').bxSlider({
+      auto: true,
+      autoControls: false,
+      pause: 4000
+    });
 });
