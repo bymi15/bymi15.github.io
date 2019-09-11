@@ -97,6 +97,10 @@ p.lead {
     font-size: 3rem;
 }
 
+.list-inline-item {
+    font-size: 1.5rem;
+}
+
 .dev-icons .list-inline-item i:hover {
     color: #BD5D38;
 }
