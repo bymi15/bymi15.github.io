@@ -4,10 +4,6 @@
 
 -   [https://bymi15.github.io](https://bymi15.github.io)
 
-## Source Code Repo
-
--   [https://github.com/bymi15/Portfolio](https://github.com/bymi15/Portfolio)
-
 ## Background
 
 -   I've decided to migrate my Vanilla JS / HTML / CSS single page portfolio into a React SPA.
