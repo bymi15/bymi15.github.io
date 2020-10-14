@@ -1,0 +1,31 @@
+section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    padding: 1rem !important;
+    max-width: 75rem;
+    display: flex !important;
+    align-items: center;
+}
+
+section#projects {
+    max-width: 85rem;
+}
+
+section {
+    min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+    section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        padding: 3rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    div.landing {
+        width: calc(100% - 17rem);
+        float: right;
+    }
+}

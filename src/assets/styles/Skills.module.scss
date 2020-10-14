@@ -1,0 +1,9 @@
+@import './_variables';
+.skillDiv h4 {
+    color: $color-secondary;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+.skillDiv h4:not(:first-child) {
+    margin-top: 1.6rem;
+}

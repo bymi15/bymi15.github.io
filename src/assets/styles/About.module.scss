@@ -1,0 +1,52 @@
+@import './_variables';
+.nameText {
+    color: $color-primary;
+}
+
+.subText {
+    color: $color-light;
+    margin-top: 1rem;
+}
+
+.desc {
+    max-width: 44rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.desc p {
+    font-size: 1.15rem;
+}
+
+.socialDiv .socialIcon {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #495057;
+    color: #fff !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.socialDiv .github:hover {
+    background-color: #550fc5;
+}
+
+.socialDiv .facebook:hover {
+    background-color: #3b5998;
+}
+
+.socialDiv .linkedin:hover {
+    background-color: #0078b1;
+}
+
+.socialDiv .stackoverflow:hover {
+    background-color: #e0731a;
+}
+
+.socialDiv .email:hover {
+    background-color: #db483d;
+}
