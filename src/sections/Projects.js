@@ -28,7 +28,7 @@ const Projects = () => (
                     <ShowcaseCard
                         title='Coding Academy Online Platform'
                         images={getImagePathArr('tocol', 'png', 4)}
-                        tags={['React', 'Redux', 'Django', 'WebRTC', 'RobotJS', 'ElectronJS']}
+                        tags={['React', 'Redux', 'Django', 'Websockets', 'WebRTC', 'RobotJS', 'ElectronJS', 'Nginx', 'Docker']}
                         link='https://tonyscoding.com'
                     />
                 </Col>
