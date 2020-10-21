@@ -10,6 +10,14 @@ const Projects = () => (
             <Row>
                 <Col xs='12' sm='6' xl='4'>
                     <ShowcaseCard
+                        title='React-Edit-Text'
+                        images={getImagePathArr('react-edit-text', 'png', 3)}
+                        tags={['React', 'UI Component', 'Editable', 'Text', 'Open source', 'NPM package']}
+                        link='https://github.com/bymi15/react-edit-text'
+                    />
+                </Col>
+                <Col xs='12' sm='6' xl='4'>
+                    <ShowcaseCard
                         title='Job Tracker Board'
                         images={getImagePathArr('jtb', 'png', 4)}
                         tags={['React', 'Redux', 'Django', 'Bootstrap']}
