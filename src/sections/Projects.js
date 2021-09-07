@@ -10,6 +10,21 @@ const Projects = () => (
       <Row>
         <Col xs="12" sm="6" xl="4">
           <ShowcaseCard
+            title="Uniworld 3D Environment"
+            images={getImagePathArr("uniworld", "png", 7)}
+            tags={[
+              "Unity3D",
+              "C#",
+              "Real-time",
+              "Virtual Environment",
+              "3D Embedded Slides",
+              "360-degree images and videos",
+            ]}
+            link="https://www.youtube.com/watch?v=bqh3O8WMJgE"
+          />
+        </Col>
+        <Col xs="12" sm="6" xl="4">
+          <ShowcaseCard
             title="React-Edit-Text"
             images={getImagePathArr("react-edit-text", "png", 3)}
             tags={["React", "UI Component", "Editable", "Text", "Open source", "NPM package"]}

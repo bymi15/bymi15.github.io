@@ -4,7 +4,7 @@ import { Card, CardImg, CardBody, Badge, CardTitle } from "reactstrap";
 import styles from "../assets/styles/ShowcaseCard.module.scss";
 import ImageLightbox from "./ImageLightbox";
 
-const ShowcaseCard = ({ title, tags, images, videoUrl, link }) => {
+const ShowcaseCard = ({ title, tags, images, link }) => {
   const [isLightboxOpen, setLightboxOpen] = React.useState(false);
   return (
     images &&
@@ -17,11 +17,7 @@ const ShowcaseCard = ({ title, tags, images, videoUrl, link }) => {
               setLightboxOpen(true);
             }}
           >
-            {videoUrl ? (
-              <></>
-            ) : (
-              <CardImg top width="100%" src={require("../" + images[0]).default} alt={title} />
-            )}
+            <CardImg top width="100%" src={require("../" + images[0]).default} alt={title} />
           </div>
           <CardBody>
             <CardTitle>
