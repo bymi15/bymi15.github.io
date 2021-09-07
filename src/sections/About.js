@@ -35,7 +35,8 @@ const About = () => (
             programming platforms such as Codeforces and Leetcode.
           </li>
           <li>
-            Exploring other areas including <strong>game engine</strong> development with Java, C++, and OpenGL, and building <strong>3D VR/AR environments</strong> with Unity3D and C#.
+            Exploring other areas including <strong>game engine</strong> development with Java, C++,
+            and OpenGL, and building <strong>3D VR/AR environments</strong> with Unity3D and C#.
           </li>
         </ul>
         <p>

@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const SkillRow = ({ children }) => <ul className='list-inline'>{children}</ul>;
+const SkillRow = ({ children }) => <ul className="list-inline">{children}</ul>;
 
 SkillRow.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default SkillRow;
