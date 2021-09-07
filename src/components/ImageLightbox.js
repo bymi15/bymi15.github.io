@@ -7,9 +7,9 @@ const ImageLightbox = ({ images, setLightboxOpen }) => {
 
     return (
         <Lightbox
-            mainSrc={require('../' + images[imageIndex])}
-            nextSrc={require('../' + images[(imageIndex + 1) % images.length])}
-            prevSrc={require('../' + images[(imageIndex + images.length - 1) % images.length])}
+            mainSrc={require('../' + images[imageIndex]).default}
+            nextSrc={require('../' + images[(imageIndex + 1) % images.length]).default}
+            prevSrc={require('../' + images[(imageIndex + images.length - 1) % images.length]).default}
             onCloseRequest={() => setLightboxOpen(false)}
             onMovePrevRequest={() =>
                 setImageIndex((imageIndex + images.length - 1) % images.length)

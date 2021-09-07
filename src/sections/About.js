@@ -16,12 +16,10 @@ const About = () => (
         Hi, I'm
         <span className={styles.nameText}> Brian Min</span>
       </h1>
-      <h3 className={styles.subText}>A final year computer science student at UCL</h3>
+      <h3 className={styles.subText}>Graduate Software Engineer at American Express</h3>
       <div className={styles.desc}>
         <p>
-          I'm a full-time student based in London and I'm currently working on building{" "}
-          <strong>virtual environments</strong> with <strong>Unity3D</strong> for my Master's
-          project.
+          I'm a full-time software engineer based in London currently working at American Express.
         </p>
         <p>I like to spend my free time on:</p>
         <ul>
@@ -37,7 +35,7 @@ const About = () => (
             programming platforms such as Codeforces and Leetcode.
           </li>
           <li>
-            Developing <strong>game engines</strong> with Java, C++, and OpenGL
+            Exploring other areas including <strong>game engine</strong> development with Java, C++, and OpenGL, and building <strong>3D VR/AR environments</strong> with Unity3D and C#.
           </li>
         </ul>
         <p>

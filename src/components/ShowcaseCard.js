@@ -6,7 +6,7 @@ import ImageLightbox from "./ImageLightbox";
 
 const ShowcaseCard = ({ title, tags, images, link }) => {
   const [isLightboxOpen, setLightboxOpen] = React.useState(false);
-
+console.log(images[0]);
   return (
     images &&
     images.length > 0 && (
@@ -18,7 +18,7 @@ const ShowcaseCard = ({ title, tags, images, link }) => {
               setLightboxOpen(true);
             }}
           >
-            <CardImg top width="100%" src={require("../" + images[0])} alt="" />
+            <CardImg top width="100%" src={require("../" + images[0]).default} alt={title} />
           </div>
           <CardBody>
             <CardTitle>

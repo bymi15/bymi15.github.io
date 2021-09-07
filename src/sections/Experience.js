@@ -6,6 +6,24 @@ const Experience = () => (
         <div className='w-100'>
             <h2 className='mb-5'>Experience</h2>
             <ResumeRow
+                jobTitle='Graduate Technology Engineer'
+                company='American Express'
+                desc=''
+                date='September 2021 - Current'
+            />
+            <ResumeRow
+                jobTitle='Senior Programming Tutor'
+                company='UCL'
+                desc='Responsible for recruiting, inducting and training 
+                24 programming tutors who support first year computer science 
+                students in developing skills in programming with C, Java, Haskell and Python. 
+                Acted as a conduit between the CS department, the programming tutors and the tutoring scheme.
+                Organised events for first year undergraduate computer science students. Provided regular 
+                progress reports to the Director of Undergraduate Programmes, and Senior Teaching
+                 and Learning Administrator.'
+                date='September 2020 - March 2021'
+            />
+            <ResumeRow
                 jobTitle='Summer Technology Intern'
                 company='American Express'
                 desc='Used React, Redux and in-house modules to create a
