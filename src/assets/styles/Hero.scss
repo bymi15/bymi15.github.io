@@ -2,7 +2,7 @@
 
 #hero {
   width: 100%;
-  height: auto;
+  height: calc(100vh - 85px);
   position: relative;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
@@ -83,6 +83,11 @@
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
+  }
+}
+@media (max-width: 1200px) {
+  #hero {
+    height: auto;
   }
 }
 @media (max-width: 992px) {
