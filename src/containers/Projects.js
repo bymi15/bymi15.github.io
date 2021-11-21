@@ -26,7 +26,7 @@ const Projects = () => {
         <Loader />
       ) : !_.isEmpty(data) ? (
         data.map((d) => (
-          <Col xs="12" sm="6" xl="4">
+          <Col md="6" xl="4" className="mb-5 mb-md-0">
             <ShowcaseCard
               title={d.title}
               images={getImagePathArr(d.img.namePrefix, d.img.extension, d.img.count)}
