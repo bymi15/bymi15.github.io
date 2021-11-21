@@ -31,18 +31,18 @@
 .navbar {
   padding: 0;
 }
-.navbar .collapse .navbar-nav {
+.navbar-collapse .navbar-nav {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
   align-items: center;
 }
-.navbar .collapse .navbar-nav li {
+.navbar-collapse .navbar-nav li {
   position: relative;
 }
-.navbar .collapse .navbar-nav li a,
-.navbar .collapse .navbar-nav li a:focus {
+.navbar-collapse .navbar-nav li a,
+.navbar-collapse .navbar-nav li a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,32 +53,32 @@
   white-space: nowrap;
   transition: 0.3s;
 }
-.navbar .collapse .navbar-nav li a i,
-.navbar .collapse .navbar-nav li a:focus i {
+.navbar-collapse .navbar-nav li a i,
+.navbar-collapse .navbar-nav li a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar .collapse .navbar-nav li a:hover,
-.navbar .collapse .navbar-nav .active,
-.navbar .collapse .navbar-nav .active:focus,
-.navbar .collapse .navbar-nav li:hover > a {
+.navbar-collapse .navbar-nav li a:hover,
+.navbar-collapse .navbar-nav .active,
+.navbar-collapse .navbar-nav .active:focus,
+.navbar-collapse .navbar-nav li:hover > a {
   color: $color-primary;
 }
-.navbar .collapse .navbar-nav .filled,
-.navbar .collapse .navbar-nav .filled:focus {
+.navbar-collapse .navbar-nav .filled,
+.navbar-collapse .navbar-nav .filled:focus {
   background: $color-primary;
   padding: 8px 20px;
   border-radius: 4px;
   color: #fff;
   margin-left: 30px;
 }
-.navbar .collapse .navbar-nav .filled:hover,
-.navbar .collapse .navbar-nav .filled:focus:hover {
+.navbar-collapse .navbar-nav .filled:hover,
+.navbar-collapse .navbar-nav .filled:focus:hover {
   color: #fff;
   background: #3194db;
 }
-.navbar .collapse .navbar-nav .dropdown ul {
+.navbar-collapse .navbar-nav .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
@@ -93,53 +93,53 @@
   transition: 0.3s;
   border-radius: 4px;
 }
-.navbar .collapse .navbar-nav .dropdown ul li {
+.navbar-collapse .navbar-nav .dropdown ul li {
   min-width: 200px;
 }
-.navbar .collapse .navbar-nav .dropdown ul a {
+.navbar-collapse .navbar-nav .dropdown ul a {
   padding: 10px 20px;
   text-transform: none;
 }
-.navbar .collapse .navbar-nav .dropdown ul a i {
+.navbar-collapse .navbar-nav .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .collapse .navbar-nav .dropdown ul a:hover,
-.navbar .collapse .navbar-nav .dropdown ul .active:hover,
-.navbar .collapse .navbar-nav .dropdown ul li:hover > a {
+.navbar-collapse .navbar-nav .dropdown ul a:hover,
+.navbar-collapse .navbar-nav .dropdown ul .active:hover,
+.navbar-collapse .navbar-nav .dropdown ul li:hover > a {
   color: $color-primary;
 }
-.navbar .collapse .navbar-nav .dropdown:hover > ul {
+.navbar-collapse .navbar-nav .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
-.navbar .collapse .navbar-nav .dropdown .dropdown ul {
+.navbar-collapse .navbar-nav .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
 }
-.navbar .collapse .navbar-nav .dropdown .dropdown:hover > ul {
+.navbar-collapse .navbar-nav .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
   visibility: visible;
 }
 @media (max-width: 1366px) {
-  .navbar .collapse .navbar-nav .dropdown .dropdown ul {
+  .navbar-collapse .navbar-nav .dropdown .dropdown ul {
     left: -90%;
   }
-  .navbar .collapse .navbar-nav .dropdown .dropdown:hover > ul {
+  .navbar-collapse .navbar-nav .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 @media (max-width: 992px) {
-  .navbar .collapse .navbar-nav li a,
-  .navbar .collapse .navbar-nav li a:focus {
+  .navbar-collapse .navbar-nav li a,
+  .navbar-collapse .navbar-nav li a:focus {
     padding: 10px 0 10px 0px;
     transition: 0s;
   }
-  .navbar .collapse .navbar-nav .filled,
-  .navbar .collapse .navbar-nav .filled:focus {
+  .navbar-collapse .navbar-nav .filled,
+  .navbar-collapse .navbar-nav .filled:focus {
     margin-left: 0px;
   }
 }

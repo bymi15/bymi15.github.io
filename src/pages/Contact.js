@@ -1,11 +1,12 @@
 import React from "react";
 import { Animated } from "react-animated-css";
 import { Container } from "reactstrap";
+import styles from "../assets/styles/Contact.module.scss";
 import ContactForm from "../containers/ContactForm";
 
 const Contact = () => (
-  <Animated animationIn="fadeIn" animationInDelay={50}>
-    <Container className="pad-top" style={{ height: "calc(100vh - 85px)" }}>
+  <Animated className={styles.contactContainer} animationIn="fadeIn" animationInDelay={50}>
+    <Container className="pad-top">
       <div className="section-title">
         <h2>Contact</h2>
         <p>Feel free to get in touch with me for any enquiries</p>

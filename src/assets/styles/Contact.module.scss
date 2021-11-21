@@ -1,0 +1,10 @@
+.contactContainer {
+  height: calc(100vh - 85px);
+}
+
+@media (max-width: 1200px) {
+  .contactContainer {
+    height: auto;
+    padding-bottom: 40px;
+  }
+}
