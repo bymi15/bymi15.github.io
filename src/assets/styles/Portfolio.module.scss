@@ -1,0 +1,10 @@
+.portfolioContainer {
+  height: calc(100vh - 85px);
+}
+
+@media (max-width: 1200px) {
+  .portfolioContainer {
+    height: auto;
+    padding-bottom: 40px;
+  }
+}

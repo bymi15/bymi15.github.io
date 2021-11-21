@@ -3,7 +3,7 @@ const ENV = process.env.NODE_ENV === "development" ? "dev" : "prod";
 const config = {
   ENV: ENV,
   WEB_DOMAIN: ENV === "dev" ? "http://localhost:3000" : "https://brianmin.com",
-  API_ENDPOINT: "https://brianmin.com/api",
+  API_ENDPOINT: "https://brianmin.netlify.app/api",
   INSTAGRAM_URL: "https://instagram.com/bymi15",
   YOUTUBE_URL: "https://www.youtube.com/channel/UCAlY1iJoAOwLw7yMADOj5Xw",
   LINKEDIN_URL: "https://www.linkedin.com/in/bymi15/",

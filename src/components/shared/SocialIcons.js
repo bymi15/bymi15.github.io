@@ -9,7 +9,7 @@ const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="bx bxl-github"></i>
+      <i className="bx bxl-github"></i>
     </a>
     <a
       className={styles.socialIcon + " " + styles.linkedin}
@@ -17,7 +17,7 @@ const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="bx bxl-linkedin"></i>
+      <i className="bx bxl-linkedin"></i>
     </a>
     <a
       className={styles.socialIcon + " " + styles.stackoverflow}
@@ -25,7 +25,7 @@ const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="bx bxl-stack-overflow"></i>
+      <i className="bx bxl-stack-overflow"></i>
     </a>
 
     <a
@@ -34,7 +34,7 @@ const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="bx bxl-instagram"></i>
+      <i className="bx bxl-instagram"></i>
     </a>
 
     <a
@@ -43,7 +43,7 @@ const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="bx bxl-youtube"></i>
+      <i className="bx bxl-youtube"></i>
     </a>
   </div>
 );

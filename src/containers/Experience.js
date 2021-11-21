@@ -21,7 +21,7 @@ function Experience() {
   return (
     <>
       {loading || config.PRE_RENDERING ? (
-        <Loader />
+        <Loader style={{ marginTop: "50px" }} />
       ) : !_.isEmpty(data) ? (
         data.map((d, index) => (
           <ExperienceRow

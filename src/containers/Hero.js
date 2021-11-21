@@ -39,7 +39,7 @@ const Hero = () => (
               Working with distributed, event-driven microservices with Go, Kafka, Kubernetes.
             </p>
             <Link className="btn-md orange" to="/about#experience">
-              <i class="bx bxs-briefcase"></i> View Experience
+              <i className="bx bxs-briefcase"></i> View Experience
             </Link>
           </div>
         </Animated>
@@ -58,7 +58,7 @@ const Hero = () => (
               (UCL).
             </p>
             <Link className="btn-md green" to="/about">
-              <i class="bx bx-pencil"></i> About Me
+              <i className="bx bx-pencil"></i> About Me
             </Link>
           </div>
         </Animated>
@@ -81,7 +81,7 @@ const Hero = () => (
               <strong>170+</strong> on Github.
             </p>
             <Link className="btn-md blue" to="/portfolio">
-              <i class="bx bxs-grid-alt"></i> View Projects
+              <i className="bx bxs-grid-alt"></i> View Projects
             </Link>
           </div>
         </Animated>
@@ -100,7 +100,7 @@ const Hero = () => (
               Virtual Environments.
             </p>
             <Link className="btn-md red" to="/skills">
-              <i class="bx bx-code-alt"></i> View Skills
+              <i className="bx bx-code-alt"></i> View Skills
             </Link>
           </div>
         </Animated>
