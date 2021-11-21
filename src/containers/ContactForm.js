@@ -76,13 +76,8 @@ const ContactForm = () => {
   return (
     <div className={styles.contactDiv}>
       <Row>
-        <Col sm="12" md="6">
-          <h3 className="mb-2">Send a message</h3>
-          <div className="underLine"></div>
-          {renderForm()}
-        </Col>
-        <Col sm="12" md="6">
-          <h3 className="mb-2">Connect with me</h3>
+        <Col lg="6">
+          <h3 className="heading mb-2">Connect with me</h3>
           <div className="underLine"></div>
           <p>
             Feel free to send me a message or connect with me through social networking platforms.
@@ -90,6 +85,11 @@ const ContactForm = () => {
             please get in touch with me. I'd love to hear from you!
           </p>
           <SocialIcons />
+        </Col>
+        <Col lg="6" className="mt-5 mt-lg-0">
+          <h3 className="heading mb-2">Send a message</h3>
+          <div className="underLine"></div>
+          {renderForm()}
         </Col>
       </Row>
     </div>

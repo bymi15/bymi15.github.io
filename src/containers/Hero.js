@@ -26,7 +26,7 @@ const Hero = () => (
       </Animated>
       <div className="row icon-boxes">
         <Animated
-          className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+          className="col-lg-6 col-xl-3 d-flex align-items-stretch mb-5 mb-xl-0"
           animationIn="zoomIn"
           animationInDelay={400}
         >
@@ -44,7 +44,7 @@ const Hero = () => (
           </div>
         </Animated>
         <Animated
-          className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+          className="col-lg-6 col-xl-3 d-flex align-items-stretch mb-5 mb-xl-0"
           animationIn="zoomIn"
           animationInDelay={500}
         >
@@ -63,7 +63,7 @@ const Hero = () => (
           </div>
         </Animated>
         <Animated
-          className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+          className="col-lg-6 col-xl-3 d-flex align-items-stretch mb-5 mb-xl-0"
           animationIn="zoomIn"
           animationInDelay={600}
         >
@@ -86,7 +86,7 @@ const Hero = () => (
           </div>
         </Animated>
         <Animated
-          className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+          className="col-lg-6 col-xl-3 d-flex align-items-stretch mb-5 mb-xl-0"
           animationIn="zoomIn"
           animationInDelay={700}
         >

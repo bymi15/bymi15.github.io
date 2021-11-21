@@ -48,7 +48,9 @@ const About = () => (
                 <li>Cucumber (BDD)</li>
               </ul>
             </p>
-            <SocialIcons />
+            <div className={styles.centerMd}>
+              <SocialIcons />
+            </div>
           </div>
         </Col>
         <Col lg="4" className="text-center">
@@ -58,14 +60,14 @@ const About = () => (
       <ScrollDownButton href="#experience" />
       <div className="divider" />
       <Row>
-        <Col>
+        <Col lg="6">
           <h3 id="experience" className="heading">
             Experience
           </h3>
           <div className="underLine"></div>
           <Experience />
         </Col>
-        <Col>
+        <Col lg="6" className="mt-4 mt-lg-0">
           <h3 id="education" className="heading">
             Education
           </h3>

@@ -3,7 +3,7 @@
 .experienceRow {
   display: flex !important;
   justify-content: space-between !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
   padding: 0 0 50px 20px;
   border-left: 2px solid $color-primary;
   position: relative;
@@ -27,7 +27,8 @@
 }
 
 .experienceRow .date {
-  min-width: 18rem;
+  width: 100%;
+  text-align: right !important;
 }
 
 .experienceRow .date span {
@@ -39,19 +40,11 @@
   padding: 5px 15px;
 }
 
-@media (min-width: 768px) {
-  .experienceRow {
-    flex-direction: row !important;
-  }
-  .experienceRow .date {
-    text-align: right !important;
-  }
-}
-
 .experienceRow .title {
   color: $color-dark;
   font-size: 18px;
   font-weight: 600;
+  width: 100%;
 }
 
 .experienceRow .company {
@@ -71,4 +64,29 @@
   margin-left: 10px;
   font-size: 14px;
   font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .experienceRow .date span {
+    font-size: 12px;
+  }
+  .experienceRow .title {
+    font-size: 16px;
+  }
+  .experienceRow .company {
+    font-size: 14px;
+  }
+  .experienceRow .desc {
+    font-size: 13px;
+  }
+  .experienceRow .location {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experienceRow .date span {
+    font-size: 11px;
+    padding: 4px 7px;
+  }
 }

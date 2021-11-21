@@ -8,7 +8,7 @@ const CheckList = ({ className, items }) => (
     {items &&
       items.map((item) => (
         <li key={item}>
-          <FontAwesomeIcon className="fa-li text-primary" icon={faCheck} /> {item}
+          <FontAwesomeIcon className="fa-li" style={{ color: "#2188d1" }} icon={faCheck} /> {item}
         </li>
       ))}
   </ul>

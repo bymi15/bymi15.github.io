@@ -2,8 +2,11 @@
 
 .scrollDownButton {
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+@media (max-width: 992px) {
+  .scrollDownButton {
+    visibility: hidden;
+  }
 }
 .scrollDownButton a span {
   position: absolute;

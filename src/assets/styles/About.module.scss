@@ -14,7 +14,7 @@
   padding-bottom: 2rem;
 }
 
-p {
+.about p {
   font-size: 17px;
   font-family: "Muli", sans-serif;
 }
@@ -30,15 +30,6 @@ p {
   color: $color-primary;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-}
-
-@media (max-width: 480px) {
-  .list {
-    grid-template-columns: repeat(1, minmax(180px, 230px));
-  }
-  .about p {
-    font-size: 16px;
-  }
 }
 
 .list li::before {
@@ -61,8 +52,32 @@ p {
   height: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 992px) {
   .profile {
     margin-top: 10px;
+  }
+  .list li {
+    font-size: 14px;
+  }
+  .list li::before {
+    font-size: 12px;
+  }
+  .about p {
+    font-size: 16px;
+  }
+  .centerMd {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .list li {
+    font-size: 13px;
+  }
+  .list li::before {
+    font-size: 11px;
+  }
+  .about p {
+    font-size: 14px;
   }
 }
