@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import Lightbox from "react-image-lightbox";
 
 const ImageLightbox = ({ images, setLightboxOpen }) => {
@@ -7,9 +7,9 @@ const ImageLightbox = ({ images, setLightboxOpen }) => {
 
   return (
     <Lightbox
-      mainSrc={require("../" + images[imageIndex]).default}
-      nextSrc={require("../" + images[(imageIndex + 1) % images.length]).default}
-      prevSrc={require("../" + images[(imageIndex + images.length - 1) % images.length]).default}
+      mainSrc={images[imageIndex]}
+      nextSrc={images[(imageIndex + 1) % images.length]}
+      prevSrc={images[(imageIndex + images.length - 1) % images.length]}
       onCloseRequest={() => setLightboxOpen(false)}
       onMovePrevRequest={() => setImageIndex((imageIndex + images.length - 1) % images.length)}
       onMoveNextRequest={() => setImageIndex((imageIndex + 1) % images.length)}

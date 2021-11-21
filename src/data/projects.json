@@ -1,0 +1,137 @@
+[
+  {
+    "id": 9,
+    "title": "Uniworld 3D Environment",
+    "img": {
+      "namePrefix": "uniworld",
+      "extension": "png",
+      "count": 8
+    },
+    "tags": [
+      "Unity3D",
+      "C#",
+      "Serverless NodeJS",
+      "Azure Functions",
+      "3D Virtual Environment",
+      "React",
+      "Environment Editor"
+    ],
+    "url": "https://www.youtube.com/watch?v=bqh3O8WMJgE",
+    "desc": "A 3D virtual space for university events such as lectures, conferences, and showcases. Key features include networked real-time avatars, embedded presentation slides, dynamic 360-degree photo and video backgrounds, and a web editor tool for creating virtual rooms in the environment.",
+    "date": "2020-11-01"
+  },
+  {
+    "id": 8,
+    "title": "React-edit-text",
+    "img": {
+      "namePrefix": "react-edit-text",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["React", "UI Component", "Editable Text", "Open source", "NPM package"],
+    "url": "https://github.com/bymi15/react-edit-text",
+    "desc": "An open-source project that provides a lightweight editable text component for React with over 1200 weekly downloads on NPM and used by 170+ on Github.",
+    "date": "2020-11-16"
+  },
+  {
+    "id": 7,
+    "title": "Job Trackify",
+    "img": {
+      "namePrefix": "jobtrackify",
+      "extension": "png",
+      "count": 6
+    },
+    "tags": ["React", "Typescript", "Redux", "NodeJS", "Express", "MongoDB", "Heroku"],
+    "url": "https://brianmin.com/jobtrackify",
+    "desc": "A platform for managing and organising job applications, notes, and interview processes in an interactive Kanban board.",
+    "date": "2020-09-28"
+  },
+  {
+    "id": 6,
+    "title": "Coding Academy Online Platform",
+    "img": {
+      "namePrefix": "tocol",
+      "extension": "png",
+      "count": 4
+    },
+    "tags": [
+      "React",
+      "Redux",
+      "Django",
+      "Websockets",
+      "WebRTC",
+      "RobotJS",
+      "ElectronJS",
+      "Nginx",
+      "Docker"
+    ],
+    "url": "https://topolar.co.kr",
+    "desc": "A cross-platform application that allows coding instructors to remotely teach students from various academies in Seoul through real-time screen sharing, remote desktop control, and voice chat.",
+    "date": "2019-06-01"
+  },
+  {
+    "id": 5,
+    "title": "UCL Korean Society Forum",
+    "img": {
+      "namePrefix": "uclks",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["Laravel", "PHP", "MySQL", "JQuery", "AJAX"],
+    "url": "http://uclks.org",
+    "desc": "A website for society members and guests to view upcoming events and announcements for the UCL Korean Society. Also a content management system with RBAC, built from scratch.",
+    "date": "2019-08-05"
+  },
+  {
+    "id": 4,
+    "title": "E-Commerce Platform",
+    "img": {
+      "namePrefix": "ecom",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["NodeJS", "Express", "MongoDB", "Stripe API", "Bootstrap"],
+    "url": "https://github.com/bymi15/ShoppingPlatform",
+    "desc": "Personal project to build a fully functional e-commerce platform from scratch, integrated payments with Stripe API.",
+    "date": "2017-06-01"
+  },
+  {
+    "id": 3,
+    "title": "Maplace Pre-order Landing Page",
+    "img": {
+      "namePrefix": "maplace",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["JQuery", "Javascript", "HTML", "CSS", "Paypal API"],
+    "url": "http://maplace.co",
+    "desc": "Landing page for attracting investors to pre-order products, integrated with Paypal API",
+    "date": "2016-10-01"
+  },
+  {
+    "id": 2,
+    "title": "Health Care App (NHS)",
+    "img": {
+      "namePrefix": "nhs",
+      "extension": "png",
+      "count": 5
+    },
+    "tags": ["Ionic", "Firebase", "OpenEHR API", "Android", "IOS"],
+    "url": "https://github.com/bymi15/NHS-WhatsThePlan",
+    "desc": "A hybrid mobile app (IOS, Android) for managing digital care plans, viewing and booking appointments, accessing various healthcare information, and reminders to take medicine.",
+    "date": "2017-04-09"
+  },
+  {
+    "id": 1,
+    "title": "2D Helicopter Game",
+    "img": {
+      "namePrefix": "copter",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["C", "Java", "Processing", "Engduino (Arduino)"],
+    "url": "https://github.com/bymi15/EngduinoCopter",
+    "desc": "A 2D platform game with controls integrated with an Engduino (modified variant of an Arduino) device.",
+    "date": "2015-11-16"
+  }
+]

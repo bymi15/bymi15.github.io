@@ -1,0 +1,39 @@
+@import "./_variables";
+
+.socialDiv .socialIcon {
+  font-size: 24px;
+  display: inline-block;
+  color: #414b55;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.socialDiv .github:hover {
+  color: #4a14a0;
+  text-decoration: none;
+}
+
+.socialDiv .youtube:hover {
+  color: #e44141;
+  text-decoration: none;
+}
+
+.socialDiv .linkedin:hover {
+  color: #2188d1;
+  text-decoration: none;
+}
+
+.socialDiv .stackoverflow:hover {
+  color: #da6e17;
+  text-decoration: none;
+}
+
+.socialDiv .instagram:hover {
+  color: #12a04b;
+  text-decoration: none;
+}

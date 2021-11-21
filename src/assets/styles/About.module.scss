@@ -1,52 +1,68 @@
-@import './_variables';
+@import "./_variables";
 .nameText {
-    color: $color-primary;
+  color: $color-primary;
 }
 
 .subText {
-    color: $color-light;
-    margin-top: 1rem;
+  color: $color-light;
+  margin-top: 1rem;
 }
 
-.desc {
-    max-width: 44rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.desc p {
-    font-size: 1.15rem;
+.about {
+  max-width: 44rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.socialDiv .socialIcon {
-    display: inline-block;
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: #495057;
-    color: #fff !important;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 3.5rem;
-    margin-right: 1rem;
-    transition: background-color 0.2s ease;
+p {
+  font-size: 17px;
+  font-family: "Muli", sans-serif;
 }
 
-.socialDiv .github:hover {
-    background-color: #550fc5;
+.list {
+  margin-top: 7px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 230px));
+  gap: 6px 10px;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  color: $color-primary;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
-.socialDiv .facebook:hover {
-    background-color: #3b5998;
+@media (max-width: 480px) {
+  .list {
+    grid-template-columns: repeat(1, minmax(180px, 230px));
+  }
+  .about p {
+    font-size: 16px;
+  }
 }
 
-.socialDiv .linkedin:hover {
-    background-color: #0078b1;
+.list li::before {
+  content: "➤";
+  left: 0px;
+  margin-right: 5px;
+  color: $color-primary;
+  font-size: 14px;
+  line-height: 12px;
 }
 
-.socialDiv .stackoverflow:hover {
-    background-color: #e0731a;
+.profile {
+  margin-top: 80px;
+  width: 300px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
 }
 
-.socialDiv .email:hover {
-    background-color: #db483d;
+@media (max-width: 480px) {
+  .profile {
+    margin-top: 10px;
+  }
 }

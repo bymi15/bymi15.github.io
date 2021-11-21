@@ -1,0 +1,46 @@
+@import "./_variables";
+
+:global(section#contact h3) {
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.2rem !important;
+  font-weight: 600;
+}
+
+:global(section#contact form input),
+:global(section#contact form textarea),
+:global(section#contact form button) {
+  font-size: 0.9rem;
+}
+
+.contactDiv {
+  width: 100%;
+  margin-top: 40px;
+  padding: 3rem;
+}
+
+.contactDiv h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contactDiv p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contactDiv input,
+.contactDiv textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contactDiv button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 4px;
+}

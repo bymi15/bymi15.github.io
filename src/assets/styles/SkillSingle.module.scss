@@ -1,8 +1,10 @@
-@import './_variables';
+@import "./_variables";
 .skill {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 .skill:not(:last-child) {
-    margin-right: 1rem !important;
+  margin-right: 1.5rem !important;
 }

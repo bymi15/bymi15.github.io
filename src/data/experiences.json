@@ -1,0 +1,56 @@
+[
+  {
+    "id": 6,
+    "jobTitle": "Technology Graduate Engineer",
+    "company": "American Express",
+    "desc": "Working with distributed event-driven microservices with emphasis on behaviour-driven development, using technologies including Go, Kafka, and Kubernetes.",
+    "url": "",
+    "location": "London, UK",
+    "date": "September 2021 - Present"
+  },
+  {
+    "id": 5,
+    "jobTitle": "Senior Programming Tutor",
+    "company": "UCL",
+    "desc": "Responsible for recruiting, inducting and training 24 programming tutors who support first year computer science students in developing skills in programming with C, Java, Haskell and Python.",
+    "url": "",
+    "location": "London, UK",
+    "date": "September 2020 - March 2021"
+  },
+  {
+    "id": 4,
+    "jobTitle": "Technology Summer Intern",
+    "company": "American Express",
+    "desc": "Used React and Redux to build a frontend module that can be used by customer care professionals to find supplier information. Improved UX by using predictive search dropdowns and collapsible panels. Implemented infinite scrolling and lazy loading to improve overall performance.",
+    "url": "",
+    "location": "London, UK",
+    "date": "July 2020 - August 2020"
+  },
+  {
+    "id": 3,
+    "jobTitle": "Software Developer",
+    "company": "Topolar",
+    "desc": "Built a cross-platform hybrid application that allows coding instructors to remotely teach students from various academies in Seoul through a platform that allows screen sharing with remote desktop control access and voice chat. Built the full-stack application with React, Electron and Django and configured the live production server with Docker and NGINX.",
+    "url": "https://topolar.co.kr",
+    "location": "Seoul, Korea",
+    "date": "July 2019 - August 2019"
+  },
+  {
+    "id": 2,
+    "jobTitle": "Paratrooper",
+    "company": "Republic of Korea Marine Corps",
+    "desc": "Participated in various combat training exercises as rifleman and squad leader in the 21st Airborne Battalion. Jumped from CH-47 and CH-53 aircrafts at 1300ft altitude for parachute training exercises. Trained with the US Marines in the KMEP joint military exercises.",
+    "url": "",
+    "location": "Seoul, Korea",
+    "date": "August 2017 - April 2019"
+  },
+  {
+    "id": 1,
+    "jobTitle": "Web Developer",
+    "company": "Maplace",
+    "desc": "Built a responsive landing page with HTML, CSS, JQuery/Javascript to attract investors to pre-order our product. Integrated Paypal API to provide a payment system for processing the pre-orders.",
+    "url": "http://maplace.co",
+    "location": "London, UK",
+    "date": "October 2016 - June 2017"
+  }
+]

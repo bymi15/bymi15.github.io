@@ -1,0 +1,74 @@
+@import "./_variables";
+
+.experienceRow {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-direction: column !important;
+  padding: 0 0 50px 20px;
+  border-left: 2px solid $color-primary;
+  position: relative;
+}
+
+.flexRow {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+
+.experienceRow::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  background: #fff;
+  border: 2px solid $color-primary;
+}
+
+.experienceRow .date {
+  min-width: 18rem;
+}
+
+.experienceRow .date span {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #696969;
+  background: #f7f8f9;
+  padding: 5px 15px;
+}
+
+@media (min-width: 768px) {
+  .experienceRow {
+    flex-direction: row !important;
+  }
+  .experienceRow .date {
+    text-align: right !important;
+  }
+}
+
+.experienceRow .title {
+  color: $color-dark;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.experienceRow .company {
+  color: $color-primary;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.experienceRow .desc {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.experienceRow .location {
+  margin-left: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
