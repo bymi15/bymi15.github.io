@@ -1,19 +1,12 @@
 {
-    "short_name": "Brian Min",
-    "name": "Brian Min's Portfolio",
-    "icons": [{
-            "src": "favicon.ico",
-            "sizes": "32x32 16x16",
-            "type": "image/x-icon"
-        },
-        {
-            "src": "apple-touch-icon.png",
-            "type": "image/png",
-            "sizes": "180x180"
-        }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+  "name": "Brian Min",
+  "short_name": "Brian Min",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "."
 }
