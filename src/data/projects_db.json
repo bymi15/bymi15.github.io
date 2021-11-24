@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "2D Helicopter Game",
     "img": {
       "namePrefix": "copter",
@@ -14,7 +13,6 @@
     "createdTimestamp": "2021-11-23T15:09:05Z07:00"
   },
   {
-    "id": 2,
     "title": "Health Care App (NHS)",
     "img": {
       "namePrefix": "nhs",
@@ -28,7 +26,6 @@
     "createdTimestamp": "2021-11-23T16:01:05Z07:00"
   },
   {
-    "id": 3,
     "title": "Maplace Pre-order Landing Page",
     "img": {
       "namePrefix": "maplace",
@@ -42,7 +39,6 @@
     "createdTimestamp": "2021-11-23T16:02:05Z07:00"
   },
   {
-    "id": 4,
     "title": "E-Commerce Platform",
     "img": {
       "namePrefix": "ecom",
@@ -56,7 +52,6 @@
     "createdTimestamp": "2021-11-23T16:03:05Z07:00"
   },
   {
-    "id": 5,
     "title": "UCL Korean Society Forum",
     "img": {
       "namePrefix": "uclks",
@@ -70,7 +65,6 @@
     "createdTimestamp": "2021-11-23T16:04:05Z07:00"
   },
   {
-    "id": 6,
     "title": "Coding Academy Online Platform",
     "img": {
       "namePrefix": "tocol",
@@ -94,7 +88,6 @@
     "createdTimestamp": "2021-11-23T16:05:05Z07:00"
   },
   {
-    "id": 7,
     "title": "Job Trackify",
     "img": {
       "namePrefix": "jobtrackify",
@@ -108,7 +101,6 @@
     "createdTimestamp": "2021-11-23T16:06:05Z07:00"
   },
   {
-    "id": 8,
     "title": "React-edit-text",
     "img": {
       "namePrefix": "react-edit-text",
@@ -122,7 +114,6 @@
     "createdTimestamp": "2021-11-23T16:07:05Z07:00"
   },
   {
-    "id": 9,
     "title": "Uniworld 3D Environment",
     "img": {
       "namePrefix": "uniworld",

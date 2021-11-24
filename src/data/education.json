@@ -1,20 +1,22 @@
 [
   {
-    "id": 2,
-    "degree": "MEng Computer Science",
-    "institution": "University College London",
-    "desc": "Graduated with First Class Honours",
-    "url": "",
-    "location": "London, UK",
-    "date": "2021"
-  },
-  {
     "id": 1,
     "degree": "IB Diploma",
     "institution": "Bangkok Patana School",
     "desc": "Final Grade: 40/45. Higher Level: Computer Science, Physics, Mathematics. Standard Level: Economics, Japanese, English",
     "url": "",
     "location": "Bangkok, Thailand",
-    "date": "2015"
+    "date": "2015",
+    "createdTimestamp": "2021-11-23T15:04:05Z07:00"
+  },
+  {
+    "id": 2,
+    "degree": "MEng Computer Science",
+    "institution": "University College London",
+    "desc": "Graduated with First Class Honours",
+    "url": "",
+    "location": "London, UK",
+    "date": "2021",
+    "createdTimestamp": "2021-11-24T15:04:05Z07:00"
   }
 ]

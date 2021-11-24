@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 type ExperienceService struct {
@@ -27,7 +28,9 @@ func (service ExperienceService) GetExperiences() ([]models.Experience, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	cursor, err := service.Collection.Find(ctx, bson.D{})
+	findOptions := options.Find()
+	findOptions.SetSort(bson.D{{"createdTimestamp", -1}})
+	cursor, err := service.Collection.Find(ctx, bson.D{}, findOptions)
 	if err != nil {
 		defer cursor.Close(ctx)
 		return Experiences, err
