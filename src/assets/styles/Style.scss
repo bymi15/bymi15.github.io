@@ -152,6 +152,22 @@ section {
 .pad-top {
   padding-top: 125px;
 }
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
 
 h3.heading {
   font-size: 22px;
@@ -201,5 +217,31 @@ h3.heading {
   .filled,
   .filled:focus {
     margin-left: 0px;
+  }
+}
+
+.project-showcase-col {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .project-showcase-col {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-showcase-col {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1555px) {
+  .project-showcase-col {
+    flex: 0 0 auto;
+    width: 25%;
   }
 }

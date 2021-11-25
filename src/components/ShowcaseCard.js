@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Badge, Card, CardBody, CardImg, CardTitle } from "reactstrap";
+import { Badge, Card, CardBody, CardImg, CardTitle, UncontrolledTooltip } from "reactstrap";
 import styles from "../assets/styles/ShowcaseCard.module.scss";
 import ImageLightbox from "./ImageLightbox";
 
-const ShowcaseCard = ({ title, tags, images, link, desc, date }) => {
+const ShowcaseCard = ({ id, title, tags, images, link, desc, date }) => {
   const [isLightboxOpen, setLightboxOpen] = React.useState(false);
   return (
     images &&
@@ -19,8 +19,8 @@ const ShowcaseCard = ({ title, tags, images, link, desc, date }) => {
           >
             <CardImg top width="100%" src={images[0]} alt={title} />
           </div>
-          <CardBody>
-            <CardTitle>
+          <CardBody className={styles.showcaseBody}>
+            <CardTitle className={styles.title}>
               {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer">
                   <h4>{title}</h4>
@@ -29,8 +29,18 @@ const ShowcaseCard = ({ title, tags, images, link, desc, date }) => {
                 <h4>{title}</h4>
               )}
             </CardTitle>
-            <div>
-              <p>{desc}</p>
+            <div id={`desc-${id}`} className={styles.description}>
+              {desc}
+            </div>
+            <UncontrolledTooltip
+              innerClassName={styles.tooltip}
+              placement="bottom"
+              target={`desc-${id}`}
+              autohide={false}
+            >
+              {desc}
+            </UncontrolledTooltip>
+            <div className={styles.tags}>
               {tags &&
                 tags.map((tag) => (
                   <Badge key={tag} className={styles.badge} color="light" pill>

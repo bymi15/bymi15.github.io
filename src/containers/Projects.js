@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React from "react";
-import { Col, Row } from "reactstrap";
+import { Row } from "reactstrap";
 import Loader from "../components/shared/Loader";
 import ShowcaseCard from "../components/ShowcaseCard";
 import config from "../config";
@@ -26,8 +26,9 @@ const Projects = () => {
         <Loader />
       ) : !_.isEmpty(data) ? (
         data.map((d) => (
-          <Col key={d.id} md="6" xl="4" className="mb-5 mb-md-0">
+          <div key={d.id} className="project-showcase-col mb-4 mb-md-0">
             <ShowcaseCard
+              id={d.id}
               title={d.title}
               images={getImagePathArr(d.img.namePrefix, d.img.extension, d.img.count)}
               tags={d.tags}
@@ -35,7 +36,7 @@ const Projects = () => {
               date={d.date}
               desc={d.desc}
             />
-          </Col>
+          </div>
         ))
       ) : (
         <></>

@@ -5,7 +5,7 @@ import styles from "../../assets/styles/Loader.module.scss";
 const Loader = ({ fullScreen, style }) => (
   <Container
     fluid
-    className="d-flex"
+    className="d-flex justify-content-center"
     style={
       fullScreen ? { height: "100vh", width: "100vw", background: "#fff" } : { background: "#fff" }
     }

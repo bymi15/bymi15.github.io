@@ -9,13 +9,13 @@
     },
     "tags": ["C", "Java", "Processing", "Engduino (Arduino)"],
     "url": "https://github.com/bymi15/EngduinoCopter",
-    "desc": "A 2D platform game with controls integrated with an Engduino (modified variant of an Arduino) device.",
+    "desc": "A 2D platform game with an external Engduino (Arduino variant) controller that can be tilted up and down to move the helicopter. Developed as part of a university project.",
     "date": "2015-11-16",
     "createdTimestamp": "2021-11-23T15:09:05Z07:00"
   },
   {
     "id": 2,
-    "title": "Health Care App (NHS)",
+    "title": "NHS Health Care App (What's The Plan)",
     "img": {
       "namePrefix": "nhs",
       "extension": "png",
@@ -23,7 +23,7 @@
     },
     "tags": ["Ionic", "Firebase", "OpenEHR API", "Android", "IOS"],
     "url": "https://github.com/bymi15/NHS-WhatsThePlan",
-    "desc": "A hybrid mobile app (IOS, Android) for managing digital care plans, viewing and booking appointments, accessing various healthcare information, and reminders to take medicine.",
+    "desc": "A hybrid mobile app (IOS, Android) for managing digital care plans, viewing and booking appointments, accessing various healthcare information, and reminders to take medicine. Led a team of three as a university project in collaboration with a client from NHS.",
     "date": "2017-04-09",
     "createdTimestamp": "2021-11-23T16:01:05Z07:00"
   },
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "title": "Coding Academy Online Platform",
+    "title": "Coding Academy Platform",
     "img": {
       "namePrefix": "tocol",
       "extension": "png",
@@ -136,7 +136,7 @@
       "Azure Functions",
       "3D Virtual Environment",
       "React",
-      "Environment Editor"
+      "Master's Project"
     ],
     "url": "https://www.youtube.com/watch?v=bqh3O8WMJgE",
     "desc": "A 3D virtual space for university events such as lectures, conferences, and showcases. Key features include networked real-time avatars, embedded presentation slides, dynamic 360-degree photo and video backgrounds, and a web editor tool for creating virtual rooms in the environment.",

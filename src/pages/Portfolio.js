@@ -7,7 +7,7 @@ import Projects from "../containers/Projects";
 const Portfolio = () => (
   <>
     <Animated className={styles.portfolioContainer} animationIn="fadeIn" animationInDelay={50}>
-      <Container className="pad-top">
+      <Container fluid className="pad-top">
         <div className="section-title">
           <h2>Portfolio</h2>
           <p>Explore my projects and various applications I've built</p>
