@@ -38,8 +38,8 @@ const About = () => (
               quickly learn new technologies, a passion for writing clean and scalable code, and a
               desire for delivering high quality products.
             </p>
-            <p className="mt-3">
-              Recently I've been working with the following technologies:
+            <div className="mt-3">
+              <p>Recently I've been working with the following technologies:</p>
               <ul className={styles.list}>
                 <li>React Hooks</li>
                 <li>Go</li>
@@ -47,7 +47,7 @@ const About = () => (
                 <li>Kubernetes</li>
                 <li>Cucumber (BDD)</li>
               </ul>
-            </p>
+            </div>
             <div className={styles.centerMd}>
               <SocialIcons />
             </div>

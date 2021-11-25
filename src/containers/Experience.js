@@ -1,12 +1,14 @@
 import _ from "lodash";
 import React from "react";
 import ExperienceRow from "../components/ExperienceRow";
-import Loader from "../components/shared/Loader";
+import SkeletonPlaceholder from "../components/shared/SkeletonPlaceholder";
 import config from "../config";
 import experienceData from "../data/experiences.json";
 import { useCachedFetch } from "../utils/cachedFetchHook";
 
 function Experience() {
+  const PLACEHOLDERS = Array(2).fill(0);
+
   let { loading, data, error } = useCachedFetch(
     `${config.API_ENDPOINT}/experiences`,
     config.CACHE_TOGGLE
@@ -21,7 +23,11 @@ function Experience() {
   return (
     <>
       {loading || config.PRE_RENDERING ? (
-        <Loader style={{ marginTop: "50px" }} />
+        PLACEHOLDERS.map((_, index) => (
+          <div key={index} className="mb-4">
+            <SkeletonPlaceholder rows={6} ready={!loading && !config.PRE_RENDERING} />
+          </div>
+        ))
       ) : !_.isEmpty(data) ? (
         data.map((d, index) => (
           <ExperienceRow

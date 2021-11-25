@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "react-image-lightbox/style.css";
+import "react-placeholder/lib/reactPlaceholder.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./assets/styles/Style.scss";
 import "./assets/vendor/boxicons/css/boxicons.min.css";
