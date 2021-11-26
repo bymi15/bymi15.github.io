@@ -9,7 +9,7 @@ const Portfolio = () => (
       <Container fluid className="pad-top">
         <div className="section-title">
           <h2>Portfolio</h2>
-          <p>Explore my projects and various applications I've built</p>
+          <p>Explore my projects and applications I've built with various technologies</p>
         </div>
         <Projects />
       </Container>

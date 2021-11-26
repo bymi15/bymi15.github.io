@@ -115,7 +115,7 @@
       "extension": "png",
       "count": 3
     },
-    "tags": ["React", "UI Component", "Editable Text", "Open source", "NPM package"],
+    "tags": ["React", "UI Component", "Editable Text", "Open source", "NPM"],
     "url": "https://github.com/bymi15/react-edit-text",
     "desc": "An open-source project that provides a lightweight editable text component for React with over 1200 weekly downloads on NPM and used by 170+ on Github.",
     "date": "2020-11-16",
@@ -129,15 +129,7 @@
       "extension": "png",
       "count": 8
     },
-    "tags": [
-      "Unity3D",
-      "C#",
-      "Serverless NodeJS",
-      "Azure Functions",
-      "3D Virtual Environment",
-      "React",
-      "Master's Project"
-    ],
+    "tags": ["Unity", "C#", "Serverless", "NodeJS", "Azure", "VR", "React"],
     "url": "https://www.youtube.com/watch?v=bqh3O8WMJgE",
     "desc": "A 3D virtual space for university events such as lectures, conferences, and showcases. Key features include networked real-time avatars, embedded presentation slides, dynamic 360-degree photo and video backgrounds, and a web editor tool for creating virtual rooms in the environment.",
     "date": "2020-11-01",

@@ -13,11 +13,11 @@ const Layout = ({ children }) => {
         const el = document.getElementById(location.hash.replace("#", ""));
         if (el) {
           window.scrollTo({
-            behavior: el ? "smooth" : "auto",
-            top: el ? el.offsetTop - 100 : 0,
+            behavior: "smooth",
+            top: el.offsetTop - 100,
           });
         }
-      }, 100);
+      }, 200);
     } else {
       window.scrollTo({
         behavior: "smooth",
