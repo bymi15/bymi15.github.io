@@ -6,6 +6,16 @@ import ImageLightbox from "./ImageLightbox";
 
 const ShowcaseCard = ({ id, title, tags, images, link, desc, date, isTeam, isWork }) => {
   const [isLightboxOpen, setLightboxOpen] = React.useState(false);
+  const [showMore, setShowMore] = React.useState(false);
+  const [isOverflowing, setIsOverflowing] = React.useState(false);
+  const descEl = React.useRef(null);
+
+  React.useEffect(() => {
+    if (descEl && descEl.current) {
+      setIsOverflowing(descEl.current.scrollHeight !== descEl.current.clientHeight);
+    }
+  }, [descEl]);
+
   return (
     images &&
     images.length > 0 && (
@@ -19,7 +29,7 @@ const ShowcaseCard = ({ id, title, tags, images, link, desc, date, isTeam, isWor
           >
             <CardImg top width="100%" src={images[0]} alt={title} />
           </div>
-          <CardBody className={styles.showcaseBody}>
+          <CardBody className={showMore ? styles.showcaseBodyFull : styles.showcaseBody}>
             <CardTitle className={styles.title}>
               {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer">
@@ -64,17 +74,19 @@ const ShowcaseCard = ({ id, title, tags, images, link, desc, date, isTeam, isWor
                 </>
               )}
             </div>
-            <div id={`desc-${id}`} className={styles.description}>
+            <div ref={descEl} className={showMore ? styles.descriptionFull : styles.description}>
               {desc}
             </div>
-            <UncontrolledTooltip
-              innerClassName={styles.tooltip}
-              placement="bottom"
-              target={`desc-${id}`}
-              autohide={false}
-            >
-              {desc}
-            </UncontrolledTooltip>
+            <div>
+              {isOverflowing && !showMore && (
+                <button
+                  className={`${styles.showMoreButton} btn btn-secondary`}
+                  onClick={() => setShowMore(true)}
+                >
+                  Show more
+                </button>
+              )}
+            </div>
             <div className={styles.tags}>
               {tags &&
                 tags.map((tag) => (

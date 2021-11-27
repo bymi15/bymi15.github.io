@@ -267,3 +267,13 @@ h3.heading {
   font-weight: 600;
   background-color: #f9f9f9;
 }
+@media (max-width: 768px) {
+  .btnWrapper {
+    text-align: left;
+    display: inline-block;
+  }
+  .categoryFilter .btn-filter {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
