@@ -48,6 +48,8 @@ const Projects = () => {
                 link={d.url}
                 date={d.date}
                 desc={d.desc}
+                isTeam={d.isTeam}
+                isWork={d.isWork}
               />
             </div>
           ))}

@@ -11,6 +11,8 @@
     "url": "https://github.com/bymi15/EngduinoCopter",
     "desc": "A 2D platform game with an external Engduino (Arduino variant) controller that can be tilted up and down to move the helicopter. Developed as part of a university project.",
     "date": "2015-11-16",
+    "isTeam": false,
+    "isWork": false,
     "createdTimestamp": "2021-11-23T15:09:05Z07:00"
   },
   {
@@ -25,6 +27,8 @@
     "url": "https://github.com/bymi15/NHS-WhatsThePlan",
     "desc": "A hybrid mobile app (IOS, Android) for managing digital care plans, viewing and booking appointments, accessing various healthcare information, and reminders to take medicine. Led a team of three as a university project in collaboration with a client from NHS.",
     "date": "2017-04-09",
+    "isTeam": true,
+    "isWork": true,
     "createdTimestamp": "2021-11-23T16:01:05Z07:00"
   },
   {
@@ -39,6 +43,8 @@
     "url": "http://maplace.co",
     "desc": "Landing page for attracting investors to pre-order products, integrated with Paypal API",
     "date": "2016-10-01",
+    "isTeam": false,
+    "isWork": true,
     "createdTimestamp": "2021-11-23T16:02:05Z07:00"
   },
   {
@@ -53,6 +59,8 @@
     "url": "https://github.com/bymi15/ShoppingPlatform",
     "desc": "Personal project to build a fully functional e-commerce platform from scratch, integrated payments with Stripe API.",
     "date": "2017-06-01",
+    "isTeam": false,
+    "isWork": false,
     "createdTimestamp": "2021-11-23T16:03:05Z07:00"
   },
   {
@@ -67,6 +75,8 @@
     "url": "http://uclks.org",
     "desc": "A website for society members and guests to view upcoming events and announcements for the UCL Korean Society. Also a content management system with RBAC, built from scratch.",
     "date": "2019-08-05",
+    "isTeam": false,
+    "isWork": true,
     "createdTimestamp": "2021-11-23T16:04:05Z07:00"
   },
   {
@@ -91,6 +101,8 @@
     "url": "https://topolar.co.kr",
     "desc": "A cross-platform application that allows coding instructors to remotely teach students from various academies in Seoul through real-time screen sharing, remote desktop control, and voice chat.",
     "date": "2019-06-01",
+    "isTeam": true,
+    "isWork": true,
     "createdTimestamp": "2021-11-23T16:05:05Z07:00"
   },
   {
@@ -105,6 +117,8 @@
     "url": "https://brianmin.com/jobtrackify",
     "desc": "A platform for managing and organising job applications, notes, and interview processes in an interactive Kanban board.",
     "date": "2020-09-28",
+    "isTeam": false,
+    "isWork": false,
     "createdTimestamp": "2021-11-23T16:06:05Z07:00"
   },
   {
@@ -119,6 +133,8 @@
     "url": "https://github.com/bymi15/react-edit-text",
     "desc": "An open-source project that provides a lightweight editable text component for React with over 1200 weekly downloads on NPM and used by 170+ on Github.",
     "date": "2020-11-16",
+    "isTeam": false,
+    "isWork": false,
     "createdTimestamp": "2021-11-23T16:07:05Z07:00"
   },
   {
@@ -133,6 +149,23 @@
     "url": "https://www.youtube.com/watch?v=bqh3O8WMJgE",
     "desc": "A 3D virtual space for university events such as lectures, conferences, and showcases. Key features include networked real-time avatars, embedded presentation slides, dynamic 360-degree photo and video backgrounds, and a web editor tool for creating virtual rooms in the environment.",
     "date": "2020-11-01",
+    "isTeam": false,
+    "isWork": false,
     "createdTimestamp": "2021-11-23T16:08:05Z07:00"
+  },
+  {
+    "id": 10,
+    "title": "Real Estate Management System",
+    "img": {
+      "namePrefix": "property",
+      "extension": "png",
+      "count": 5
+    },
+    "tags": ["React", "Redux", "Django", "MySQL", "Google Cloud Platform", "Gitlab CI/CD"],
+    "desc": "An internal property management system for a Real Estate company.  Key features include creating and storing transactions, tracking investments and earnings in a real-time dashboard, managing flip and hard money projects, and managing employees, contractors and investors with an admin panel UI.",
+    "date": "2021-09-01",
+    "isTeam": true,
+    "isWork": true,
+    "createdTimestamp": "2021-11-24T19:09:46Z"
   }
 ]

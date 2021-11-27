@@ -67,6 +67,17 @@
   margin-bottom: 0;
 }
 
+.showcaseCard .date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: $color-primary;
+}
+
+.showcaseCard .icon {
+  color: $color-primary;
+  margin-left: 5px;
+}
+
 .showcaseCard .showcaseBody {
   height: 220px;
   overflow: hidden;

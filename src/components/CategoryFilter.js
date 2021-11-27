@@ -12,6 +12,7 @@ function CategoryFilter({ filter, setFilter }) {
       </button>
       {PROJECT_CATEGORIES.map((category) => (
         <button
+          key={category}
           className={`btn-filter ${filter === category ? "active" : ""}`}
           onClick={() => setFilter(category)}
         >

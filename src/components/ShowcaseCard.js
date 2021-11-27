@@ -4,7 +4,7 @@ import { Badge, Card, CardBody, CardImg, CardTitle, UncontrolledTooltip } from "
 import styles from "../assets/styles/ShowcaseCard.module.scss";
 import ImageLightbox from "./ImageLightbox";
 
-const ShowcaseCard = ({ id, title, tags, images, link, desc, date }) => {
+const ShowcaseCard = ({ id, title, tags, images, link, desc, date, isTeam, isWork }) => {
   const [isLightboxOpen, setLightboxOpen] = React.useState(false);
   return (
     images &&
@@ -29,6 +29,41 @@ const ShowcaseCard = ({ id, title, tags, images, link, desc, date }) => {
                 <h4>{title}</h4>
               )}
             </CardTitle>
+            <div>
+              <span className={styles.date}>{date}</span>
+              {isTeam ? (
+                <>
+                  <span id={`team-${id}`}>
+                    <span
+                      className={`${styles.icon} iconify`}
+                      data-icon="fluent:people-team-16-filled"
+                    ></span>
+                  </span>
+                  <UncontrolledTooltip placement="top" target={`team-${id}`}>
+                    Team Work
+                  </UncontrolledTooltip>
+                </>
+              ) : (
+                <>
+                  <span id={`individual-${id}`}>
+                    <span className={`${styles.icon} iconify`} data-icon="bi:person-fill"></span>
+                  </span>
+                  <UncontrolledTooltip placement="top" target={`individual-${id}`}>
+                    Individual Work
+                  </UncontrolledTooltip>
+                </>
+              )}
+              {isWork && (
+                <>
+                  <span id={`work-${id}`}>
+                    <span className={`${styles.icon} iconify`} data-icon="ic:baseline-work"></span>
+                  </span>
+                  <UncontrolledTooltip placement="top" target={`work-${id}`}>
+                    Work for organisation
+                  </UncontrolledTooltip>
+                </>
+              )}
+            </div>
             <div id={`desc-${id}`} className={styles.description}>
               {desc}
             </div>
