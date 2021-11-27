@@ -16,6 +16,8 @@ type Project struct {
 	Url              string         `bson:"url,omitempty" json:"url"`
 	Desc             string         `bson:"desc,omitempty" json:"desc"`
 	Date             string         `bson:"date,omitempty" json:"date"`
+	IsTeam           bool           `bson:"isTeam,omitempty" json:"isTeam"`
+	IsWork           bool           `bson:"isWork,omitempty" json:"isWork"`
 	CreatedTimestamp string         `bson:"createdTimestamp,omitempty" json:"createdTimestamp"`
 }
 
@@ -28,6 +30,8 @@ func NewProject() Project {
 	instance.Url = ""
 	instance.Desc = ""
 	instance.Date = time.Now().Format("2006-01-02")
+	instance.IsTeam = false
+	instance.IsWork = false
 	instance.CreatedTimestamp = time.Now().Format("2006-01-02T15:04:05Z07:00")
 	return instance
 }
