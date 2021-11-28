@@ -39,7 +39,7 @@ const ShowcaseCard = ({ id, title, tags, images, link, desc, date, isTeam, isWor
                 <h4>{title}</h4>
               )}
             </CardTitle>
-            <div>
+            <div className={styles.subtitle}>
               <span className={styles.date}>{date}</span>
               {isTeam ? (
                 <>

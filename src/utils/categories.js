@@ -1,1 +1,1 @@
-export const PROJECT_CATEGORIES = ["React", "JQuery", "Django", "NodeJS", "Unity", "Ionic"];
+export const PROJECT_CATEGORIES = ["React", "Django", "NodeJS", "Unity", "Mobile"];
