@@ -115,6 +115,21 @@
     "createdTimestamp": "2021-11-23T16:05:05Z"
   },
   {
+    "title": "OTMEDU College Website",
+    "img": {
+      "namePrefix": "otmedu",
+      "extension": "png",
+      "count": 3
+    },
+    "tags": ["React", "Redux", "Django", "MySQL", "Heroku"],
+    "url": "https://otmedu.herokuapp.com/",
+    "desc": "Website for Over The Moon (OTMEDU), a UCAS registered international college for teaching students A-Level, IB, IGCSE, and more.",
+    "date": "2020-07-27",
+    "isTeam": false,
+    "isWork": true,
+    "createdTimestamp": "2021-11-23T16:05:30Z"
+  },
+  {
     "title": "Job Trackify",
     "img": {
       "namePrefix": "jobtrackify",
