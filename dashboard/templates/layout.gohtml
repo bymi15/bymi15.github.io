@@ -27,8 +27,8 @@
 			/>
 	</head>
 	<body>
-		<div class="container">
-			<div class="mx-auto col-sm-12 main-section" id="myTab" role="tablist">
+		<div class="container-fluid px-5">
+			<div class="mx-auto px-5 col-sm-12 main-section" id="myTab" role="tablist">
 				{{template "tabs"}}
 				<div class="tab-content" id="myTabContent">
 					{{template "experiences" . }}
@@ -36,6 +36,7 @@
 				</div>
 			</div>
 		</div>
+		{{template "sharedScripts" . }}
 	</body>
 </html>
 {{end}}

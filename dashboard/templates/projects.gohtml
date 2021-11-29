@@ -73,6 +73,20 @@
                   <label for="date" class="form-label">Date</label>
                   <input name="date" type="text" class="form-control" id="date" placeholder="ex) YYYY-MM-DD">
                 </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check mb-3">
+                      <input name="isTeam" type="checkbox" class="form-check-input" id="isTeam">
+                      <label for="isTeam" class="form-check-label">Is Team?</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check mb-3">
+                      <input name="isWork" type="checkbox" class="form-check-input" id="isWork">
+                      <label for="isWork" class="form-check-label">Is Work?</label>
+                    </div>
+                  </div>
+                </div>
                 <input name="type" type="hidden" value="projects" />
                 <input name="editId" type="hidden" value="" />
               </div>
@@ -96,6 +110,8 @@
               <th scope="col">Url</th>
               <th scope="col">Description</th>
               <th scope="col">Date</th>
+              <th scope="col">Is Team</th>
+              <th scope="col">Is Work</th>
               <th></th>
             </tr>
           </thead>
@@ -114,11 +130,26 @@
                   {{$w.Url}}
                 </a>
               </td>
-              <td>{{$w.Desc}}</td>
+              <td style="max-width: 450px">{{$w.Desc}}</td>
               <td>{{$w.Date}}</td>
               <td>
+                {{if $w.IsTeam}}
+                  <i class="fas fa-check text-success"></i>
+                {{else}}
+                  <i class="fas fa-times text-secondary"></i>
+                {{end}}
+              </td>
+              <td>
+                {{if $w.IsWork}}
+                  <i class="fas fa-check text-success"></i>
+                {{else}}
+                  <i class="fas fa-times text-secondary"></i>
+                {{end}}
+              </td>
+              <td>
                 <a href="#" onclick="editProjectModal({{$w}})" data-toggle="modal" data-target="#projectModal"><i class="fas fa-pencil-alt mr-1"></i></a>
-                <a href="/delete/project/{{$w.Id}}" onclick="return confirm('Are you sure?')"><i class="fas fa-trash text-danger"></i></a>
+                <a href="/delete/project/{{$w.Id}}" onclick="return confirm('Are you sure?')"><i class="fas fa-trash text-danger mr-1"></i></a>
+                <a href="#" onclick="downloadDataJson({{$w}}, {{$w.Title}}, false)"><i class="fas fa-download text-success"></i></a>
               </td>
             </tr>
             {{end}}
@@ -139,6 +170,8 @@
     $("#projectModal input[name=url]").val("");
     $("#projectModal textarea[name=desc]").val("");
     $("#projectModal input[name=date]").val("");
+    $("#projectModal input[name=isTeam]").prop('checked', false);
+    $("#projectModal input[name=isWork]").prop('checked', false);
     $("#projectModal h5[class='modal-title']").html("Add Project");
   }
   function editProjectModal(project) {
@@ -151,6 +184,8 @@
     $("#projectModal input[name=url]").val(project.url);
     $("#projectModal textarea[name=desc]").val(project.desc);
     $("#projectModal input[name=date]").val(project.date);
+    $("#projectModal input[name=isTeam]").prop('checked', project.isTeam);
+    $("#projectModal input[name=isWork]").prop('checked', project.isWork);
     $("#projectModal h5[class='modal-title']").html("Edit Project");
   }
 </script>

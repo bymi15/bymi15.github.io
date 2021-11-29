@@ -1,0 +1,23 @@
+{{define "sharedScripts"}}
+<script>
+  $(document).ready(function(){
+    if(window.location.hash != "") {
+      $('.nav-tabs a[href="' + window.location.hash + '"]').tab('show');
+    }
+  });
+  
+  function downloadDataJson(data, fileName, includeId) {
+    let originalData = data;
+    const filePath = fileName.replace(/\s+/g, '') + "_" + Date.now() + ".json";
+    if(!includeId){
+      delete originalData["id"];
+    }
+
+    var a = document.createElement("a");
+    var file = new Blob([JSON.stringify(originalData)], {type: 'application/json'});
+    a.href = URL.createObjectURL(file);
+    a.download = filePath;
+    a.click();
+  }
+</script>
+{{end}}

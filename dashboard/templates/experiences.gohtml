@@ -94,7 +94,7 @@
             <tr>
               <td style="max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{$f.JobTitle}}</td>
               <td>{{$f.Company}}</td>
-              <td>{{$f.Desc}}</td>
+              <td style="max-width: 450px">{{$f.Desc}}</td>
               <td>
                 <a href="{{$f.Url}}" target="_blank" rel="noopener noreferrer">
                   {{$f.Url}}
@@ -104,7 +104,8 @@
               <td>{{$f.Date}}</td>
               <td>
                 <a href="#" onclick="editExperienceModal({{$f}})" data-toggle="modal" data-target="#experienceModal"><i class="fas fa-pencil-alt mr-1"></i></a>
-                <a href="/delete/experience/{{$f.Id}}" onclick="return confirm('Are you sure?')"><i class="fas fa-trash text-danger"></i></a>
+                <a href="/delete/experience/{{$f.Id}}" onclick="return confirm('Are you sure?')"><i class="fas fa-trash text-danger mr-1"></i></a>
+                <a href="#" onclick="downloadDataJson({{$f}}, {{$f.Company}}, false)"><i class="fas fa-download text-success"></i></a>
               </td>
             </tr>
             {{end}}
