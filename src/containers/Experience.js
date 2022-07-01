@@ -1,10 +1,10 @@
 import _ from "lodash";
-import React from "react";
 import ExperienceRow from "../components/ExperienceRow";
 import SkeletonPlaceholder from "../components/shared/SkeletonPlaceholder";
 import config from "../config";
 import experienceData from "../data/experiences.json";
 import { useCachedFetch } from "../utils/cachedFetchHook";
+import { sortByDateRange } from "../utils/sort";
 
 function Experience() {
   const PLACEHOLDERS = Array(2).fill(0);
@@ -29,7 +29,7 @@ function Experience() {
           </div>
         ))
       ) : !_.isEmpty(data) ? (
-        data.map((d, index) => (
+        sortByDateRange(data).map((d, index) => (
           <ExperienceRow
             key={d.id}
             title={d.jobTitle}

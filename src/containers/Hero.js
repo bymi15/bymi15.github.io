@@ -1,4 +1,3 @@
-import React from "react";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../assets/styles/Hero.scss";
@@ -36,7 +35,7 @@ const Hero = () => (
             </div>
             <h4 className="title">Software Engineer at American Express</h4>
             <p className="description mb-3">
-              Working with distributed, event-driven microservices with Go, Kafka, Kubernetes.
+              Working with distributed, event-driven microservices in Go, Kafka, Kubernetes.
             </p>
             <Link className="btn-md orange" to="/about#experience">
               <i className="bx bxs-briefcase"></i> View Experience
@@ -77,8 +76,7 @@ const Hero = () => (
               <a href="https://github.com/bymi15/react-edit-text" target="_blank" rel="noreferrer">
                 react-edit-text
               </a>
-              , with over <strong>1200</strong> weekly downloads on NPM and used by{" "}
-              <strong>170+</strong> on Github.
+              , with over <strong>79K</strong> downloads on NPM.
             </p>
             <Link className="btn-md blue" to="/portfolio">
               <i className="bx bxs-grid-alt"></i> View Projects
@@ -96,8 +94,8 @@ const Hero = () => (
             </div>
             <h4 className="title">Full Stack Developer</h4>
             <p className="description mb-3">
-              Wide spectrum of experiences including Frontend, Backend, CI/CD, Machine Learning, and
-              Virtual Environments.
+              Wide spectrum of experiences and interests including Frontend, Backend, CI/CD, Machine
+              Learning, Virtual Environments, and Blockchain.
             </p>
             <Link className="btn-md red" to="/skills">
               <i className="bx bx-code-alt"></i> View Skills

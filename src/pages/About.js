@@ -1,4 +1,3 @@
-import React from "react";
 import { Animated } from "react-animated-css";
 import { Col, Container, Row } from "reactstrap";
 import profileImage from "../assets/img/about.jpg";
@@ -43,9 +42,10 @@ const About = () => (
               <ul className={styles.list}>
                 <li>React Hooks</li>
                 <li>Go</li>
-                <li>Kafka</li>
                 <li>Kubernetes</li>
                 <li>Cucumber (BDD)</li>
+                <li>Flow Blockchain</li>
+                <li>Cadence</li>
               </ul>
             </div>
             <div className={styles.centerMd}>

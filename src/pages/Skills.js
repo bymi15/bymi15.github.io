@@ -1,6 +1,6 @@
-import React from "react";
 import { Animated } from "react-animated-css";
 import { Container } from "reactstrap";
+import FlowLogo from "../assets/img/flow-logo.png";
 import CheckList from "../components/shared/CheckList";
 import SkillRow from "../components/SkillRow";
 import SkillSingle from "../components/SkillSingle";
@@ -37,6 +37,14 @@ const Skills = () => (
             icon={<span className="iconify" data-icon="logos:typescript-icon" />}
             text="Typescript"
           />
+          <SkillSingle
+            icon={
+              <span className="iconify">
+                <img src={FlowLogo} alt="Flow Logo" width={20} />
+              </span>
+            }
+            text="Cadence"
+          />
         </SkillRow>
 
         <h3 className="heading">Front-end</h3>
@@ -53,6 +61,10 @@ const Skills = () => (
           <SkillSingle
             icon={<span className="iconify" data-icon="logos:bootstrap" />}
             text="Bootstrap"
+          />
+          <SkillSingle
+            icon={<span className="iconify" data-icon="logos:tailwindcss-icon" />}
+            text="TailwindCSS"
           />
           <SkillSingle
             icon={<span className="iconify" data-icon="logos:ionic-icon" />}

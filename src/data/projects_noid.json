@@ -153,7 +153,7 @@
     },
     "tags": ["React", "UI Component", "Editable Text", "Open source", "NPM"],
     "url": "https://github.com/bymi15/react-edit-text",
-    "desc": "An open-source project that provides a lightweight editable text component for React with over 1200 weekly downloads on NPM and used by 170+ on Github.",
+    "desc": "An open-source project that provides a lightweight editable text component for React with over 79K downloads on NPM.",
     "date": "2020-11-16",
     "isTeam": false,
     "isWork": false,
@@ -187,5 +187,20 @@
     "isTeam": true,
     "isWork": true,
     "createdTimestamp": "2021-11-24T19:09:46Z"
+  },
+  {
+    "title": "NFTMarketFlow",
+    "img": {
+      "namePrefix": "nftmarketflow",
+      "extension": "png",
+      "count": 4
+    },
+    "tags": ["Flow Blockchain", "Cadence", "NFT", "Smart Contracts", "React", "NodeJS", "MongoDB"],
+    "url": "https://brianmin.com/nftmarketflow",
+    "desc": "An NFT Marketplace built on top of the Flow blockchain, currently operating on Flow testnet. This was a personal side-project for learning more about Flow blockchain and writing smart contracts with Cadence.",
+    "date": "2022-04-01",
+    "isTeam": false,
+    "isWork": false,
+    "createdTimestamp": "2022-07-01T14:01:10Z"
   }
 ]

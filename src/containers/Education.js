@@ -1,13 +1,13 @@
 import _ from "lodash";
-import React from "react";
 import ExperienceRow from "../components/ExperienceRow";
 import data from "../data/education.json";
+import { sortByDate } from "../utils/sort";
 
 function Education() {
   return (
     <>
       {!_.isEmpty(data) ? (
-        data.map((d, index) => (
+        sortByDate(data).map((d, index) => (
           <ExperienceRow
             key={d.id}
             title={d.degree}

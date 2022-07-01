@@ -53,10 +53,20 @@
     "id": 6,
     "jobTitle": "Technology Graduate Engineer",
     "company": "American Express",
+    "desc": "",
+    "url": "",
+    "location": "London, UK",
+    "date": "Sep 2021 - Jun 2022",
+    "createdTimestamp": "2021-11-23T15:09:05Z07:00"
+  },
+  {
+    "id": 7,
+    "jobTitle": "Software Engineer II",
+    "company": "American Express",
     "desc": "Working with distributed event-driven microservices with emphasis on behaviour-driven development, using technologies including Go, Kafka, and Kubernetes.",
     "url": "",
     "location": "London, UK",
-    "date": "Sep 2021 - Present",
-    "createdTimestamp": "2021-11-23T15:09:05Z07:00"
+    "date": "Jun 2022 - Present",
+    "createdTimestamp": "2022-07-01T14:00:57Z00:00"
   }
 ]
