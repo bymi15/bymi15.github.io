@@ -11,8 +11,8 @@ const config = {
   STACKOVERFLOW_URL: "https://stackoverflow.com/users/6213508/brian-min",
   CONTACT_FORM_URL: "https://formspree.io/mrgyvnnj",
   EMAIL: "bymi15@yahoo.com",
-  CACHE_EXPIRY_HOURS: 6,
-  CACHE_TOGGLE: ENV === "dev" ? false : true,
+  CACHE_EXPIRY_HOURS: 24,
+  CACHE_TOGGLE: true,
   PRE_RENDERING: navigator.userAgent === "ReactSnap",
 };
 

@@ -77,7 +77,7 @@ const Hero = () => (
               <a href="https://github.com/bymi15/react-edit-text" target="_blank" rel="noreferrer">
                 react-edit-text
               </a>
-              , with over <strong>79K</strong> downloads on NPM.
+              , with over <strong>325K</strong> downloads on NPM.
             </p>
             <Link className="btn-md blue" to="/portfolio">
               <i className="bx bxs-grid-alt"></i> View Projects

@@ -42,10 +42,10 @@ const About = () => (
               <ul className={styles.list}>
                 <li>React Hooks</li>
                 <li>Go</li>
-                <li>Kubernetes</li>
-                <li>Cucumber (BDD)</li>
-                <li>Flow Blockchain</li>
-                <li>Cadence</li>
+                <li>React Query</li>
+                <li>NextJS</li>
+                <li>MongoDB</li>
+                <li>Solidity</li>
               </ul>
             </div>
             <div className={styles.centerMd}>

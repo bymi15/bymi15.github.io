@@ -3,22 +3,24 @@ import ExperienceRow from "../components/ExperienceRow";
 import SkeletonPlaceholder from "../components/shared/SkeletonPlaceholder";
 import config from "../config";
 import experienceData from "../data/experiences.json";
-import { useCachedFetch } from "../utils/cachedFetchHook";
 import { sortByDateRange } from "../utils/sort";
 
 function Experience() {
   const PLACEHOLDERS = Array(2).fill(0);
 
-  let { loading, data, error } = useCachedFetch(
-    `${config.API_ENDPOINT}/experiences`,
-    config.CACHE_TOGGLE
-  );
+  // let { loading, data, error } = useCachedFetch(
+  //   `${config.API_ENDPOINT}/experiences`,
+  //   config.CACHE_TOGGLE
+  // );
 
-  if (error) {
-    console.log(error);
-    console.log("Loading static data as fallback...");
-    data = experienceData;
-  }
+  // if (error) {
+  //   console.log(error);
+  //   console.log("Loading static data as fallback...");
+  //   data = experienceData;
+  // }
+
+  const loading = false;
+  const data = experienceData;
 
   return (
     <>
