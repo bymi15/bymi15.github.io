@@ -61,22 +61,32 @@
   },
   {
     "id": 7,
-    "jobTitle": "Software Engineer II",
+    "jobTitle": "Software Engineer",
     "company": "American Express",
-    "desc": "Working with distributed event-driven microservices using Go, PostgreSQL, Kafka, BDD testing, Kubernetes, and building internal web applications with Node, React and Typescript.",
+    "desc": "Working with distributed event-driven microservices using Go, PostgreSQL, Kafka, BDD testing, Kubernetes, and building internal UI applications with React, Typescript, NodeJS and MongoDB.",
     "url": "",
     "location": "London, UK",
-    "date": "Jun 2022 - Present",
+    "date": "Jun 2022 - Nov 2024",
     "createdTimestamp": "2022-07-01T14:00:57Z00:00"
   },
   {
     "id": 8,
-    "jobTitle": "Technical Advisor",
+    "jobTitle": "Technical Advisor and Lead Developer",
     "company": "Flowverse",
     "desc": "Leading development and maintenance of the Flowverse NFT platform and marketplace, implementing smart contracts, and providing technical guidance for new initiatives.",
     "url": "https://nft.flowverse.co",
     "location": "Remote",
     "date": "Mar 2023 - Present",
     "createdTimestamp": "2023-08-09T08:59:57Z00:00"
+  },
+  {
+    "id": 9,
+    "jobTitle": "Senior Software Engineer",
+    "company": "American Express",
+    "desc": "Leading a team of engineers, spearheading system architecture design, delivering new features and enhancements to the platform, and mentoring junior engineers.",
+    "url": "",
+    "location": "London, UK",
+    "date": "Nov 2024 - Present",
+    "createdTimestamp": "2025-03-13T14:00:57Z00:00"
   }
 ]

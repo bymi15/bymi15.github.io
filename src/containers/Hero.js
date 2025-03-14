@@ -11,7 +11,7 @@ const Hero = () => (
           <div className="col-12 text-center">
             <h1>Hi, I'm Brian Min</h1>
             <h2>
-              <span className="text-highlight">Software Engineer</span> based in London
+              <span className="text-highlight">Senior Software Engineer</span> based in London
             </h2>
           </div>
         </div>
@@ -33,9 +33,10 @@ const Hero = () => (
             <div className="icon">
               <i className="ri-bank-line"></i>
             </div>
-            <h4 className="title">Software Engineer at American Express</h4>
+            <h4 className="title">Senior Software Engineer at American Express</h4>
             <p className="description mb-3">
-              Working with distributed, event-driven microservices in Go, Kafka, Kubernetes.
+              Working with distributed event-driven microservices in Go, Kafka, Kubernetes, and
+              building internal UI applications with React, Typescript, NodeJS.
             </p>
             <Link className="btn-md orange" to="/about#experience">
               <i className="bx bxs-briefcase"></i> View Experience
