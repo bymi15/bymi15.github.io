@@ -6,7 +6,7 @@ const links = [
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
+  { href: "#education", label: "Education", narrowHidden: true },
   { href: "#contact", label: "Contact" },
 ];
 const isHome = Astro.url.pathname === "/";
@@ -19,7 +19,7 @@ const isHome = Astro.url.pathname === "/";
       isHome && (
         <ul class="links">
           {links.map((l) => (
-            <li>
+            <li class:list={{ "narrow-hidden": l.narrowHidden }}>
               <a href={l.href}>{l.label}</a>
             </li>
           ))}
@@ -76,5 +76,11 @@ const isHome = Astro.url.pathname === "/";
     nav { gap: 0.75rem; }
     .links { gap: 0.875rem; }
     .links a { font-size: 0.875rem; }
+  }
+  /* Phones: the hero already shows the name; drop it and Education so Contact stays visible. */
+  @media (max-width: 480px) {
+    .brand { display: none; }
+    .links { margin: 0 auto 0 0; }
+    .narrow-hidden { display: none; }
   }
 </style>

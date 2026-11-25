@@ -93,7 +93,7 @@ p { margin: 0; }
 }
 
 /* Fade-in: content is visible unless JS is running and the element hasn't entered view yet. */
-@media (prefers-reduced-motion: no-preference) {
+@media screen and (prefers-reduced-motion: no-preference) {
   .js .reveal { transition: opacity 0.5s ease, transform 0.5s ease; }
   .js .reveal:not(.in) { opacity: 0; transform: translateY(8px); }
 }

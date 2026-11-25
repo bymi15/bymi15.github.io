@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- No email address anywhere in the site or its source — `bymi15@yahoo.com` and any `@…​.com`-style address must not appear in `src/`, `public/` (text files), or `dist/`.
+- No email address anywhere in the site or its source — the old `config.EMAIL` address and any other email address must not appear in `src/`, `public/` (text files), or `dist/`.
 - Contact form posts to `https://formspree.io/mrgyvnnj`.
 - Resume link is exactly `/storage/BrianMin_Resume.pdf`.
 - LinkedIn `https://www.linkedin.com/in/bymi15/`, GitHub `https://github.com/bymi15`.
