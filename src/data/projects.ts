@@ -2,7 +2,6 @@ import type { ImageMetadata } from "astro";
 import colorImg from "../assets/projects/colormp1.png";
 import flowverseImg from "../assets/projects/flowversenft1.png";
 import uniworldImg from "../assets/projects/uniworld1.png";
-import reactEditTextImg from "../assets/projects/react-edit-text1.png";
 
 export type Project = {
   title: string;
@@ -53,8 +52,6 @@ export const projects: Project[] = [
       "Open-source, lightweight editable text component for React, with over 79K downloads on npm.",
     tags: ["React", "TypeScript", "Open source", "npm"],
     url: "https://github.com/bymi15/react-edit-text",
-    image: reactEditTextImg,
-    imageAlt: "react-edit-text documentation page with a usage example",
   },
   {
     title: "express-typeorm-rest-boilerplate",

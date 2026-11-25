@@ -68,14 +68,6 @@ import { projects, moreProjects } from "../data/projects";
 
 <style>
   .grid { display: grid; gap: 1.25rem; }
-  @media (min-width: 720px) {
-    .grid { grid-template-columns: 1fr 1fr; }
-    .featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; }
-    .featured .thumb { border-bottom: 0; border-right: 1px solid var(--border); }
-    .featured .thumb :global(img) { height: 100%; aspect-ratio: auto; }
-    .featured .body { padding: 2rem; justify-content: center; }
-    .featured h3 { font-size: 1.5rem; }
-  }
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -101,4 +93,12 @@ import { projects, moreProjects } from "../data/projects";
   .more ul { list-style: none; margin: 0.75rem 0 0.25rem; padding: 0; display: grid; gap: 0.5rem; }
   .more li { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.9375rem; }
   .year { font-variant-numeric: tabular-nums; flex: none; }
+  @media (min-width: 720px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+    .featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; }
+    .featured .thumb { border-bottom: 0; border-right: 1px solid var(--border); }
+    .featured .thumb :global(img) { height: 100%; aspect-ratio: auto; }
+    .featured .body { padding: 2rem; justify-content: center; }
+    .featured h3 { font-size: 1.5rem; }
+  }
 </style>
