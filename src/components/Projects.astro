@@ -9,11 +9,11 @@ import { projects, moreProjects } from "../data/projects";
   <div class="grid">
     {
       projects.map((p) => (
-        <article class:list={["card", { featured: p.featured, "no-image": !p.image }]}>
-          {p.image && (
+        <article class:list={["card", { featured: p.featured, "no-image": !p.gallery?.length }]}>
+          {p.gallery?.[0] && (
             <a class="thumb" href={p.url} target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
               <Image
-                src={p.image}
+                src={p.gallery[0]}
                 alt={p.imageAlt ?? ""}
                 widths={p.featured ? [640, 960, 1280] : [480, 720]}
                 sizes={p.featured ? "(min-width: 720px) 560px, 100vw" : "(min-width: 720px) 440px, 100vw"}
