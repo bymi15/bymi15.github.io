@@ -18,3 +18,11 @@
 **Change to the main design doc:** the anti-goal on effects is narrowed: subtle, CSS-only motion that respects reduced-motion is fine; typing animations, heavy parallax and skill bars stay out.
 
 **Left to the builder:** blob colours/sizes/timings, ring colours, exact photo size.
+
+## Revision — "Figure 1" portrait (Brian, same day)
+
+Brian found the rotating rainbow ring and violet/teal blobs generic ("commonly seen AI generated stuff") and off-palette. Replaced with:
+- **Portrait as a technical-drawing figure:** square photo on the dot grid, accent-blue crop marks at the corners, muted ruler ticks along the left and bottom edges, monospace caption `fig. 1 — London, 51.51°N 0.13°W`.
+- **Palette:** only the site's own neutrals plus the single accent (`--accent`). Coloured blobs removed; at most one faint static accent glow behind the figure.
+- **Motion:** crop marks ease in on load; text entrance stays. Same rules: CSS only, off under reduced motion, never hides content without JS or in print.
+- Options considered: editorial duotone (calm, less personal); gauge ring (more motion, closer to the generic look).

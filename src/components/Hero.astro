@@ -8,9 +8,7 @@ import profile from "../assets/profile.jpg";
 <section id="top" class="hero">
   <div class="backdrop" aria-hidden="true">
     <div class="dots"></div>
-    <div class="blob blob-a"></div>
-    <div class="blob blob-b"></div>
-    <div class="blob blob-c"></div>
+    <div class="glow"></div>
   </div>
 
   <div class="container inner">
@@ -32,17 +30,25 @@ import profile from "../assets/profile.jpg";
       </div>
     </div>
 
-    <div class="portrait">
-      <div class="ring" aria-hidden="true"></div>
-      <Image
-        src={profile}
-        alt={`Portrait of ${site.name}`}
-        widths={[240, 480]}
-        sizes="(min-width: 760px) 240px, 120px"
-        loading="eager"
-        fetchpriority="high"
-      />
-    </div>
+    <figure class="figure">
+      <div class="frame">
+        <Image
+          src={profile}
+          alt={`Portrait of ${site.name}`}
+          widths={[240, 480]}
+          sizes="(min-width: 760px) 240px, 128px"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <span class="mark tl" aria-hidden="true"></span>
+        <span class="mark tr" aria-hidden="true"></span>
+        <span class="mark bl" aria-hidden="true"></span>
+        <span class="mark br" aria-hidden="true"></span>
+        <span class="ruler ruler-y" aria-hidden="true"></span>
+        <span class="ruler ruler-x" aria-hidden="true"></span>
+      </div>
+      <figcaption><span class="fig">fig. 1</span> — London, 51.51°N 0.13°W</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -51,10 +57,11 @@ import profile from "../assets/profile.jpg";
     position: relative;
     overflow: hidden;
     isolation: isolate;
-    padding: 6rem 0 3rem;
+    padding: 6rem 0 3.5rem;
+    --tick: color-mix(in srgb, var(--fg) 32%, transparent);
   }
 
-  /* ---------- Backdrop: dot grid + drifting glow ---------- */
+  /* ---------- Backdrop: dot grid + one faint accent glow ---------- */
   .backdrop {
     position: absolute;
     inset: 0;
@@ -63,32 +70,28 @@ import profile from "../assets/profile.jpg";
     -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
     mask-image: linear-gradient(to bottom, #000 60%, transparent);
   }
-
   .dots {
     position: absolute;
     inset: 0;
     background-image: radial-gradient(color-mix(in srgb, var(--fg) 16%, transparent) 1px, transparent 1.3px);
     background-size: 22px 22px;
-    -webkit-mask-image: radial-gradient(ellipse 70% 65% at 70% 45%, #000 20%, transparent 75%);
-    mask-image: radial-gradient(ellipse 70% 65% at 70% 45%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 70% at 78% 45%, #000 15%, transparent 75%);
+    mask-image: radial-gradient(ellipse 60% 70% at 78% 45%, #000 15%, transparent 75%);
   }
-
-  .blob {
+  .glow {
     position: absolute;
+    width: 30rem;
+    height: 30rem;
+    right: 2%;
+    top: -4rem;
     border-radius: 50%;
-    filter: blur(70px);
-    opacity: 0.32;
-    will-change: transform;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 14%, transparent), transparent 65%);
   }
-  :global([data-theme="dark"]) .blob { opacity: 0.22; }
-  .blob-a { width: 26rem; height: 26rem; background: var(--accent); top: -6rem; right: 6%; }
-  .blob-b { width: 20rem; height: 20rem; background: #8b5cf6; top: 8rem; right: 26%; }
-  .blob-c { width: 18rem; height: 18rem; background: #14b8a6; top: 12rem; right: -4rem; }
 
   /* ---------- Layout ---------- */
-  .inner { display: grid; gap: 2rem; align-items: center; }
+  .inner { display: grid; gap: 2.5rem; align-items: center; }
   @media (min-width: 760px) {
-    .inner { grid-template-columns: 1fr auto; gap: 3rem; }
+    .inner { grid-template-columns: 1fr auto; gap: 4rem; }
   }
 
   .location { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.9375rem; margin-bottom: 1rem; }
@@ -98,62 +101,108 @@ import profile from "../assets/profile.jpg";
   .pitch { max-width: 36rem; margin-top: 1rem; font-size: 1.0625rem; }
   .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
 
-  /* ---------- Portrait with gradient ring ---------- */
-  .portrait {
+  /* ---------- "Figure 1" portrait ---------- */
+  .figure {
+    margin: 0;
+    justify-self: center;
+    padding: 0 0 0 1.25rem; /* room for the left ruler */
+  }
+  .frame {
     position: relative;
     width: 15rem;
     aspect-ratio: 1;
-    justify-self: center;
   }
-  .ring {
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--accent), #8b5cf6, #14b8a6, var(--accent));
-  }
-  .portrait :global(img) {
-    position: relative;
+  .frame :global(img) {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 20%;
-    border-radius: 50%;
-    border: 5px solid var(--bg);
+    object-position: 50% 30%;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--border);
   }
+
+  /* Crop marks: an L at each corner, set slightly outside the photo. */
+  .mark {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 0 solid var(--accent);
+  }
+  .tl { top: -9px; left: -9px; border-top-width: 1.5px; border-left-width: 1.5px; }
+  .tr { top: -9px; right: -9px; border-top-width: 1.5px; border-right-width: 1.5px; }
+  .bl { bottom: -9px; left: -9px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+  .br { bottom: -9px; right: -9px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+
+  /* Rulers: short ticks every 12px, long ticks every 48px. */
+  .ruler { position: absolute; }
+  .ruler-y {
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background:
+      repeating-linear-gradient(to bottom, var(--tick) 0 1px, transparent 1px 48px) left / 8px 100% no-repeat,
+      repeating-linear-gradient(to bottom, var(--tick) 0 1px, transparent 1px 12px) right / 4px 100% no-repeat;
+  }
+  .ruler-x {
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background:
+      repeating-linear-gradient(to right, var(--tick) 0 1px, transparent 1px 48px) bottom / 100% 8px no-repeat,
+      repeating-linear-gradient(to right, var(--tick) 0 1px, transparent 1px 12px) top / 100% 4px no-repeat;
+  }
+
+  figcaption {
+    margin-top: 2.25rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  .fig { color: var(--accent); }
 
   @media (max-width: 759px) {
     .hero { padding-top: 3rem; }
-    .portrait { width: 7.5rem; justify-self: start; order: -1; }
-    .ring { inset: -3px; }
-    .portrait :global(img) { border-width: 3px; }
-    .blob-a { width: 18rem; height: 18rem; right: -6rem; }
-    .blob-b { width: 14rem; height: 14rem; right: 30%; top: 4rem; }
-    .blob-c { width: 12rem; height: 12rem; }
+    .figure { justify-self: start; order: -1; padding-left: 1rem; }
+    .frame { width: 8rem; }
+    .ruler-y { left: -16px; }
+    .ruler-x { bottom: -16px; }
+    .mark { width: 10px; height: 10px; }
+    .tl, .tr { top: -7px; }
+    .bl, .br { bottom: -7px; }
+    .tl, .bl { left: -7px; }
+    .tr, .br { right: -7px; }
+    figcaption { margin-top: 1.75rem; font-size: 0.6875rem; }
+    .glow { width: 20rem; height: 20rem; right: -6rem; top: -6rem; }
   }
 
   /* ---------- Motion (screen only, never when reduced motion is requested) ---------- */
   @media screen and (prefers-reduced-motion: no-preference) {
-    .blob-a { animation: drift-a 22s ease-in-out infinite alternate; }
-    .blob-b { animation: drift-b 26s ease-in-out infinite alternate; }
-    .blob-c { animation: drift-c 30s ease-in-out infinite alternate; }
-    .ring { animation: spin 14s linear infinite; }
-
     /* Entrance only when JS is running, so content is never stuck hidden. */
     :global(.js) .text > *,
-    :global(.js) .portrait {
+    :global(.js) .frame :global(img),
+    :global(.js) figcaption {
       animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
     }
     :global(.js) .text > :nth-child(2) { animation-delay: 0.08s; }
     :global(.js) .text > :nth-child(3) { animation-delay: 0.16s; }
     :global(.js) .text > :nth-child(4) { animation-delay: 0.24s; }
     :global(.js) .text > :nth-child(5) { animation-delay: 0.32s; }
-    :global(.js) .portrait { animation-name: pop; animation-duration: 0.9s; animation-delay: 0.15s; }
+    :global(.js) .frame :global(img) { animation-delay: 0.1s; }
+    :global(.js) figcaption { animation-delay: 0.6s; }
+
+    /* Crop marks settle in from slightly further out, like a frame snapping to the photo. */
+    :global(.js) .mark { animation: settle 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both; }
+    :global(.js) .tl { --dx: -8px; --dy: -8px; }
+    :global(.js) .tr { --dx: 8px; --dy: -8px; }
+    :global(.js) .bl { --dx: -8px; --dy: 8px; }
+    :global(.js) .br { --dx: 8px; --dy: 8px; }
+    :global(.js) .ruler { animation: rise 0.7s ease 0.45s both; }
   }
 
-  @keyframes drift-a { to { transform: translate(-5rem, 3rem) scale(1.1); } }
-  @keyframes drift-b { to { transform: translate(4rem, -2rem) scale(0.9); } }
-  @keyframes drift-c { to { transform: translate(-3rem, -4rem) scale(1.15); } }
-  @keyframes spin { to { transform: rotate(1turn); } }
-  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
-  @keyframes pop { from { opacity: 0; transform: scale(0.94); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  @keyframes settle { from { opacity: 0; transform: translate(var(--dx), var(--dy)); } }
 </style>
