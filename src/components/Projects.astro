@@ -1,17 +1,42 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Section from "./Section.astro";
 import Icon from "./Icon.astro";
-import { projects, moreProjects } from "../data/projects";
+import { projects, moreProjects, type Shot } from "../data/projects";
+
+export type GalleryItem = { src: string; srcset: string; alt: string };
+type Trigger = { href: string; data: string; count: number };
+
+/** Build-time viewer data for one project: WebP sources plus a no-JS fallback link. */
+async function trigger(title: string, g?: Shot[]): Promise<Trigger | undefined> {
+  if (!g?.length) return undefined;
+  const items: GalleryItem[] = await Promise.all(
+    g.map(async (src, i) => {
+      const img = await getImage({ src, widths: [960, 1600], format: "webp" });
+      return { src: img.src, srcset: img.srcSet.attribute, alt: `${title} screenshot ${i + 1} of ${g.length}` };
+    }),
+  );
+  const large = await getImage({ src: g[0], width: 1600, format: "webp" });
+  return { href: large.src, data: JSON.stringify(items), count: g.length };
+}
+
+const cards = await Promise.all(projects.map(async (p) => ({ ...p, t: await trigger(p.title, p.gallery) })));
+const more = await Promise.all(moreProjects.map(async (p) => ({ ...p, t: await trigger(p.title, p.gallery) })));
 ---
 
 <Section id="work" title="Selected work">
   <div class="grid">
     {
-      projects.map((p) => (
+      cards.map((p) => (
         <article class:list={["card", { featured: p.featured, "no-image": !p.gallery?.length }]}>
-          {p.gallery?.[0] && (
-            <a class="thumb" href={p.url} target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          {p.gallery?.[0] && p.t && (
+            <a
+              class="thumb"
+              href={p.t.href}
+              data-gallery={p.t.data}
+              data-gallery-title={p.title}
+              aria-label={`View ${p.t.count} screenshots of ${p.title}`}
+            >
               <Image
                 src={p.gallery[0]}
                 alt={p.imageAlt ?? ""}
@@ -19,6 +44,7 @@ import { projects, moreProjects } from "../data/projects";
                 sizes={p.featured ? "(min-width: 720px) 560px, 100vw" : "(min-width: 720px) 440px, 100vw"}
                 loading="lazy"
               />
+              <span class="count" aria-hidden="true">⊞ {p.t.count}</span>
             </a>
           )}
           <div class="body">
@@ -49,7 +75,7 @@ import { projects, moreProjects } from "../data/projects";
     <summary>More projects ({moreProjects.length})</summary>
     <ul>
       {
-        moreProjects.map((p) => (
+        more.map((p) => (
           <li>
             {p.url ? (
               <a href={p.url} target="_blank" rel="noopener noreferrer">
@@ -58,7 +84,20 @@ import { projects, moreProjects } from "../data/projects";
             ) : (
               <span>{p.title}</span>
             )}
-            <span class="muted year">{p.year}</span>
+            <span class="meta">
+              {p.t && (
+                <a
+                  class="shots"
+                  href={p.t.href}
+                  data-gallery={p.t.data}
+                  data-gallery-title={p.title}
+                  aria-label={`Screenshots of ${p.title}`}
+                >
+                  Screenshots
+                </a>
+              )}
+              <span class="muted year">{p.year}</span>
+            </span>
           </li>
         ))
       }
@@ -78,7 +117,12 @@ import { projects, moreProjects } from "../data/projects";
     transition: border-color 0.15s, transform 0.15s;
   }
   .card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
-  .thumb { display: block; border-bottom: 1px solid var(--border); background: var(--chip); }
+  .thumb { display: block; position: relative; border-bottom: 1px solid var(--border); background: var(--chip); }
+  .count {
+    position: absolute; right: 0.75rem; bottom: 0.75rem;
+    padding: 0.125rem 0.5rem; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--card); color: var(--fg); font-size: 0.75rem; font-weight: 500;
+  }
   .thumb :global(img) { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
   .body { padding: 1.25rem 1.375rem 1.375rem; display: flex; flex-direction: column; gap: 0.625rem; flex: 1; }
   .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 600; }
@@ -92,7 +136,9 @@ import { projects, moreProjects } from "../data/projects";
   .more summary { cursor: pointer; font-weight: 500; }
   .more ul { list-style: none; margin: 0.75rem 0 0.25rem; padding: 0; display: grid; gap: 0.5rem; }
   .more li { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.9375rem; }
-  .year { font-variant-numeric: tabular-nums; flex: none; }
+  .meta { display: inline-flex; align-items: baseline; gap: 0.875rem; flex: none; }
+  .shots { font-size: 0.8125rem; font-weight: 500; }
+  .year { font-variant-numeric: tabular-nums; }
   @media (min-width: 720px) {
     .grid { grid-template-columns: 1fr 1fr; }
     .featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; }
