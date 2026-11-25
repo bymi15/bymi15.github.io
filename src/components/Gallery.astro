@@ -23,7 +23,7 @@
 </dialog>
 
 <script>
-  type GalleryItem = { src: string; srcset: string; alt: string };
+  type GalleryItem = { src: string; srcset: string; alt: string; width: number; height: number };
 
   const dialog = document.querySelector<HTMLDialogElement>("dialog.gallery");
   const img = dialog?.querySelector("img");
@@ -38,8 +38,11 @@
     const show = (i: number) => {
       index = (i + items.length) % items.length;
       const item = items[index];
+      // Real dimensions reserve the box before load and stop small screenshots being upscaled.
+      img.width = item.width;
+      img.height = item.height;
+      img.sizes = `min(${item.width}px, 100vw)`;
       img.srcset = item.srcset;
-      img.sizes = "(min-width: 1100px) 1000px, 100vw";
       img.src = item.src;
       img.alt = item.alt;
       counter.textContent = `${index + 1} / ${items.length}`;
@@ -64,8 +67,10 @@
     dialog.querySelector(".prev")?.addEventListener("click", () => show(index - 1));
     dialog.querySelector(".next")?.addEventListener("click", () => show(index + 1));
     dialog.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowLeft") show(index - 1);
-      else if (event.key === "ArrowRight") show(index + 1);
+      if (event.altKey || event.metaKey || event.ctrlKey) return; // leave browser shortcuts (e.g. Alt+← = Back) alone
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      show(index + (event.key === "ArrowLeft" ? -1 : 1));
     });
     // A click on the dialog element itself is a click on the backdrop.
     dialog.addEventListener("click", (event) => {
@@ -104,7 +109,6 @@
   img {
     max-width: 100%;
     max-height: calc(100dvh - 10rem);
-    width: auto;
     height: auto;
     object-fit: contain;
   }

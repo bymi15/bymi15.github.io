@@ -5,7 +5,7 @@ import Icon from "./Icon.astro";
 import Gallery from "./Gallery.astro";
 import { projects, moreProjects, type Shot } from "../data/projects";
 
-export type GalleryItem = { src: string; srcset: string; alt: string };
+export type GalleryItem = { src: string; srcset: string; alt: string; width: number; height: number };
 type Trigger = { href: string; data: string; count: number };
 
 /** Build-time viewer data for one project: WebP sources plus a no-JS fallback link. */
@@ -14,7 +14,13 @@ async function trigger(title: string, g?: Shot[]): Promise<Trigger | undefined> 
   const items: GalleryItem[] = await Promise.all(
     g.map(async (src, i) => {
       const img = await getImage({ src, widths: [960, 1600], format: "webp" });
-      return { src: img.src, srcset: img.srcSet.attribute, alt: `${title} screenshot ${i + 1} of ${g.length}` };
+      return {
+        src: img.src,
+        srcset: img.srcSet.attribute,
+        alt: `${title} screenshot ${i + 1} of ${g.length}`,
+        width: src.width,
+        height: src.height,
+      };
     }),
   );
   const large = await getImage({ src: g[0], width: 1600, format: "webp" });
