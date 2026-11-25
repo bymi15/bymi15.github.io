@@ -69,10 +69,13 @@ export const projects: Project[] = [
     imageAlt: "react-edit-text demo",
   },
   {
-    title: "express-typeorm-rest-boilerplate",
-    description: "Boilerplate for REST APIs with Express and TypeORM.",
-    tags: ["Node.js", "Express", "TypeORM", "TypeScript"],
-    url: "https://github.com/bymi15/express-typeorm-rest-boilerplate",
+    title: "Job Trackify",
+    description:
+      "A platform for managing and organising job applications, notes and interview processes on an interactive Kanban board.",
+    tags: ["React", "TypeScript", "Redux", "Node.js", "Express", "MongoDB"],
+    url: "https://brianmin.com/jobtrackify",
+    gallery: shots("jobtrackify"),
+    imageAlt: "Job Trackify welcome page",
   },
 ];
 
@@ -80,7 +83,11 @@ export const projects: Project[] = [
 export const moreProjects: MoreProject[] = [
   { title: "NFTMarketFlow", year: 2022, url: "https://brianmin.com/nftmarketflow", gallery: shots("nftmarketflow") },
   { title: "Real Estate Management System", year: 2021, gallery: shots("property") },
-  { title: "Job Trackify", year: 2020, url: "https://brianmin.com/jobtrackify", gallery: shots("jobtrackify") },
+  {
+    title: "express-typeorm-rest-boilerplate",
+    year: 2020,
+    url: "https://github.com/bymi15/express-typeorm-rest-boilerplate",
+  },
   { title: "OTMEDU College Website", year: 2020, gallery: shots("otmedu") },
   { title: "Coding Academy Platform", year: 2019, gallery: shots("tocol") },
   { title: "UCL Korean Society Forum", year: 2019, gallery: shots("uclks") },
