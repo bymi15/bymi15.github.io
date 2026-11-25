@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  title: string;
+}
+const { id, title } = Astro.props;
+---
+
+<section id={id} class="section reveal" aria-labelledby={`${id}-title`}>
+  <div class="container">
+    <h2 id={`${id}-title`}>{title}</h2>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section { padding: 4.5rem 0 1.5rem; }
+  @media (max-width: 640px) { .section { padding-top: 3.5rem; } }
+</style>

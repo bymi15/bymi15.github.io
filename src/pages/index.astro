@@ -1,6 +1,23 @@
 ---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Education from "../components/Education.astro";
+import Contact from "../components/Contact.astro";
 ---
-<html lang="en">
-  <head><meta charset="utf-8" /><title>Brian Min</title></head>
-  <body><h1>Brian Min</h1></body>
-</html>
+
+<Base>
+  <Hero />
+  <Experience />
+  <Projects />
+  <Skills />
+  <Education />
+  <Contact />
+  <div class="spacer"></div>
+</Base>
+
+<style>
+  .spacer { height: 4rem; }
+</style>

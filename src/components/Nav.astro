@@ -1,0 +1,80 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { site } from "../data/site";
+
+const links = [
+  { href: "#experience", label: "Experience" },
+  { href: "#work", label: "Work" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
+];
+const isHome = Astro.url.pathname === "/";
+---
+
+<header class="site-header">
+  <nav class="container" aria-label="Main">
+    <a class="brand" href={isHome ? "#top" : "/"}>{site.name}</a>
+    {
+      isHome && (
+        <ul class="links">
+          {links.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <ThemeToggle />
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 3.75rem;
+  }
+  .brand {
+    font-weight: 650;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .brand:hover { text-decoration: none; }
+  .links {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .links::-webkit-scrollbar { display: none; }
+  .links a {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  .links a:hover { color: var(--fg); text-decoration: none; }
+  nav > :global(.theme-toggle) { margin-left: auto; }
+  .links + :global(.theme-toggle) { margin-left: 0; }
+  @media (max-width: 640px) {
+    nav { gap: 0.75rem; }
+    .links { gap: 0.875rem; }
+    .links a { font-size: 0.875rem; }
+  }
+</style>

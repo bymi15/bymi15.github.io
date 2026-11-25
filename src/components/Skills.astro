@@ -1,0 +1,28 @@
+---
+import Section from "./Section.astro";
+import { skills } from "../data/skills";
+---
+
+<Section id="skills" title="Skills">
+  <div class="groups">
+    {
+      skills.map((g) => (
+        <div class="group">
+          <h3>{g.name}</h3>
+          <ul class="chips">
+            {g.items.map((s) => (
+              <li>{s}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .groups { display: grid; gap: 1.5rem; }
+  @media (min-width: 640px) { .groups { grid-template-columns: 1fr 1fr; gap: 1.75rem 2.5rem; } }
+  h3 { font-size: 0.9375rem; margin-bottom: 0.625rem; }
+  .chips li { font-size: 0.875rem; padding: 0.25rem 0.75rem; color: var(--fg); }
+</style>

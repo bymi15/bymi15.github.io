@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page not found — Brian Min">
+  <section class="container nf">
+    <p class="muted code">404</p>
+    <h1>Page not found</h1>
+    <p class="muted">This page doesn't exist anymore — the site is now a single page.</p>
+    <a class="btn btn-primary" href="/">Back to brianmin.com</a>
+  </section>
+</Base>
+
+<style>
+  .nf { padding: 7rem 1.25rem 8rem; display: grid; gap: 1rem; justify-items: start; }
+  .code { font-family: var(--mono); }
+  h1 { font-size: 2.25rem; }
+</style>

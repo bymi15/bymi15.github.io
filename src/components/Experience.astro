@@ -1,0 +1,89 @@
+---
+import Section from "./Section.astro";
+import { experience, earlier } from "../data/experience";
+---
+
+<Section id="experience" title="Experience">
+  <ol class="timeline">
+    {
+      experience.map((job) => (
+        <li class="job">
+          <div class="job-head">
+            <h3>
+              {job.url ? (
+                <a href={job.url} target="_blank" rel="noopener noreferrer">
+                  {job.company}
+                </a>
+              ) : (
+                job.company
+              )}
+            </h3>
+            <p class="meta muted">
+              {job.start} – {job.end} · {job.location}
+            </p>
+          </div>
+          <ul class="roles">
+            {job.roles.map((role) => (
+              <li class="role">
+                <p class="role-head">
+                  <span class="role-title">{role.title}</span>
+                  {job.roles.length > 1 && (
+                    <span class="muted role-dates">
+                      {role.start} – {role.end}
+                    </span>
+                  )}
+                </p>
+                {role.summary && <p class="muted summary">{role.summary}</p>}
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ol>
+
+  <h3 class="earlier-title">Earlier</h3>
+  <ul class="earlier">
+    {
+      earlier.map((e) => (
+        <li>
+          <p>
+            <span class="role-title">{e.title}</span> · {e.company}
+            <span class="muted"> — {e.dates}</span>
+          </p>
+          <p class="muted summary">{e.line}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .job { position: relative; padding: 0 0 2.25rem 1.75rem; border-left: 1px solid var(--border); margin-left: 0.3125rem; }
+  .job:last-child { padding-bottom: 0.5rem; }
+  .job::before {
+    content: "";
+    position: absolute;
+    left: -0.375rem;
+    top: 0.3rem;
+    width: 0.6875rem;
+    height: 0.6875rem;
+    border-radius: 999px;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+  }
+  .job:first-child::before { background: var(--accent); }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; align-items: baseline; }
+  h3 { font-size: 1.125rem; }
+  h3 a { color: var(--fg); }
+  .meta { font-size: 0.875rem; }
+  .roles { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; gap: 0.875rem; }
+  .role-head { display: flex; flex-wrap: wrap; gap: 0.125rem 0.75rem; align-items: baseline; }
+  .role-title { font-weight: 600; }
+  .role-dates { font-size: 0.875rem; }
+  .summary { font-size: 0.9375rem; margin-top: 0.25rem; max-width: 44rem; }
+  .earlier-title { margin: 2.75rem 0 1rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .earlier { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; font-size: 0.9375rem; }
+  .earlier .summary { font-size: 0.875rem; margin-top: 0.125rem; }
+</style>
