@@ -2,6 +2,7 @@
 import { Image, getImage } from "astro:assets";
 import Section from "./Section.astro";
 import Icon from "./Icon.astro";
+import Gallery from "./Gallery.astro";
 import { projects, moreProjects, type Shot } from "../data/projects";
 
 export type GalleryItem = { src: string; srcset: string; alt: string };
@@ -92,8 +93,9 @@ const more = await Promise.all(moreProjects.map(async (p) => ({ ...p, t: await t
                   data-gallery={p.t.data}
                   data-gallery-title={p.title}
                   aria-label={`Screenshots of ${p.title}`}
+                  title="Screenshots"
                 >
-                  Screenshots
+                  ⊞ {p.t.count}
                 </a>
               )}
               <span class="muted year">{p.year}</span>
@@ -103,6 +105,7 @@ const more = await Promise.all(moreProjects.map(async (p) => ({ ...p, t: await t
       }
     </ul>
   </details>
+  <Gallery />
 </Section>
 
 <style>
@@ -137,7 +140,7 @@ const more = await Promise.all(moreProjects.map(async (p) => ({ ...p, t: await t
   .more ul { list-style: none; margin: 0.75rem 0 0.25rem; padding: 0; display: grid; gap: 0.5rem; }
   .more li { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.9375rem; }
   .meta { display: inline-flex; align-items: baseline; gap: 0.875rem; flex: none; }
-  .shots { font-size: 0.8125rem; font-weight: 500; }
+  .shots { font-size: 0.8125rem; font-weight: 500; white-space: nowrap; }
   .year { font-variant-numeric: tabular-nums; }
   @media (min-width: 720px) {
     .grid { grid-template-columns: 1fr 1fr; }
