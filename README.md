@@ -1,26 +1,38 @@
-# Brian Min
+# brianmin.com
 
-## Link
+Personal portfolio site — a single static page built with [Astro](https://astro.build) and deployed to GitHub Pages at [brianmin.com](https://brianmin.com).
 
-- [brianmin.com](https://brianmin.com)
+## Develop
 
-## Background
+```sh
+npm install
+npm run dev      # http://localhost:4321
+npm test         # builds the site, then checks no email address is in the source or output
+npx astro check  # type-check
+```
 
-- I revamped my static website with a new UI and backend API hosted on [Netlify](https://www.netlify.com/) using serverless functions to provide dynamic content
-- The frontend is implemented in React Hooks with CRA (Webpack) and Bootstrap with UI enhancements from the original version
-- The backend API is implemented with Go, Serverless functions (hosted on [Netlify](https://www.netlify.com/)), and MongoDB (hosted on [MongoDB Atlas](https://www.mongodb.com/atlas/database))
-- I also utilised numerous open source packages to enhance my web application in various ways
+Requires Node 22+.
 
-## Tech Stack
+## Editing content
 
-- [React](https://reactjs.org)
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Bootstrap](https://getbootstrap.com/)
-- [Reactstrap](https://reactstrap.github.io/)
-- [react-scroll](https://github.com/fisshy/react-scroll)
-- [react-image-lightbox](https://github.com/frontend-collective/react-image-lightbox)
-- [react-snap](https://github.com/stereobooster/react-snap)
-- [go](https://golang.org/)
-- [netlify](https://www.netlify.com/)
-- [mongoDB](https://www.mongodb.com/)
-- [go-mongo-serverless-crud-boilerplate](https://github.com/bymi15/go-mongo-serverless-crud-boilerplate)
+All content lives in typed data files — edit these, not the components:
+
+| File | What it holds |
+| --- | --- |
+| `src/data/site.ts` | Name, headline, pitch, links, contact form endpoint |
+| `src/data/experience.ts` | Jobs (newest first) and the compact "Earlier" list |
+| `src/data/projects.ts` | Selected work cards and the "More projects" list |
+| `src/data/skills.ts` | Skill groups |
+| `src/data/education.ts` | Education |
+
+Project card images live in `src/assets/projects/` and are resized and converted to WebP at build time.
+
+**Resume:** replace `public/storage/BrianMin_Resume.pdf` — the link path stays the same.
+
+Do not put an email address anywhere in the repo; `npm test` fails if one appears. The contact form posts to Formspree.
+
+## Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/` to GitHub Pages. `public/CNAME` keeps the `brianmin.com` custom domain.
+
+One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
