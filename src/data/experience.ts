@@ -24,7 +24,8 @@ export const experience: Experience[] = [
         title: "Lead Software Engineer",
         start: "Sep 2025",
         end: "Present",
-        summary: "Building data-heavy internal full-stack web applications.",
+        summary:
+          "Managing a small team of engineers as their line manager and leading projects end to end, while building data-heavy internal full-stack web applications.",
       },
     ],
   },

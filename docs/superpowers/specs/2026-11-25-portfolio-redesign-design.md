@@ -20,7 +20,7 @@ The portfolio at brianmin.com is several years out of date in both content and U
 ## Anti-goals
 
 - Email address must **not** appear anywhere on the site or in its source.
-- No gimmicky effects that slow the page or get in the way of skimming (typing animations, heavy parallax, skill-percentage bars).
+- No gimmicky effects that slow the page or get in the way of skimming (typing animations, heavy parallax, skill-percentage bars). Subtle CSS-only motion that respects `prefers-reduced-motion` is fine (see `2026-11-25-hero-refresh-design.md`).
 - No invented content: every claim comes from the existing site data or from Brian.
 
 ## Constraints
